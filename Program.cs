@@ -8,7 +8,6 @@ namespace NewtonsoftJsonLibrary
    {
       static void Main()
       {
-
          // Создание объекта
          var user = new User
          {
@@ -40,6 +39,15 @@ namespace NewtonsoftJsonLibrary
          }
          */
 
+         // Десериализация полного объекта
+         //string jsonString =
+         //   @"{""UserName"": ""alice_smith"",""Email"": ""alice@example.com"",""IsActive"": false,""Roles"": [""User""]}";
+
+         User deserializedUser = JsonConvert.DeserializeObject<User>(json2);
+         Console.WriteLine($"Имя пользователя: {deserializedUser.UserName}");
+         Console.WriteLine($"Email: {deserializedUser.Email}");
+         Console.WriteLine($"Активен: {deserializedUser.IsActive}");
+         Console.WriteLine($"Роли: {string.Join(", ", deserializedUser.Roles)}");
 
          CaseOne();
          Console.ReadKey();
