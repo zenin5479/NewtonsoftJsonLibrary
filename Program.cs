@@ -9,11 +9,11 @@ namespace NewtonsoftJsonLibrary
       static void Main()
       {
 
-
+         CaseOne();
          Console.ReadKey();
       }
 
-      void CaseOne()
+      static void CaseOne()
       {
          Console.WriteLine("Сериализация объекта");
          // 1. Сериализация
