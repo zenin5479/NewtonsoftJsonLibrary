@@ -13,6 +13,7 @@ namespace NewtonsoftJsonLibrary
          Console.ReadKey();
       }
 
+      // Базовая сериализация/десериализация
       static void CaseOne()
       {
          Console.WriteLine("Сериализация объекта");
