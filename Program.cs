@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
-using Newtonsoft.Json;
 
 namespace NewtonsoftJsonLibrary
 {
@@ -37,7 +37,6 @@ namespace NewtonsoftJsonLibrary
          Console.WriteLine(collectionResult);
 
          Console.WriteLine("\nДесериализация коллекции");
-
          // 4. Десериализация коллекции
          List<Movie> newMovies = JsonConvert.DeserializeObject<List<Movie>>(collectionResult);
          int i = 0;
