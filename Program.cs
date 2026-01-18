@@ -9,6 +9,38 @@ namespace NewtonsoftJsonLibrary
       static void Main()
       {
 
+         // Создание объекта
+         var user = new User
+         {
+            UserName = "john_doe",
+            Email = "john@example.com",
+            IsActive = true,
+            Roles = { "Admin", "Editor" }
+         };
+
+         // 1. Простая сериализация
+         string json1 = JsonConvert.SerializeObject(user);
+         Console.WriteLine("1. Простая сериализация:");
+         Console.WriteLine(json1);
+         // {"UserName":"john_doe","Email":"john@example.com","IsActive":true,"Roles":["Admin","Editor"]}
+
+         // 2. Сериализация с форматированием (читаемый JSON)
+         string json2 = JsonConvert.SerializeObject(user, Formatting.Indented);
+         Console.WriteLine("\n2. Сериализация с форматированием:");
+         Console.WriteLine(json2);
+         /*
+         {
+           "UserName": "john_doe",
+           "Email": "john@example.com",
+           "IsActive": true,
+           "Roles": [
+             "Admin",
+             "Editor"
+           ]
+         }
+         */
+
+
          CaseOne();
          Console.ReadKey();
       }
