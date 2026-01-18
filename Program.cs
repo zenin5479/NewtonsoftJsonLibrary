@@ -32,11 +32,11 @@ namespace NewtonsoftJsonLibrary
 
          Console.WriteLine("\nСериализация коллекции");
          // 3. Сериализация коллекции
-         List<Movie> movies = new List<Movie> 
-         { 
-            new Movie{ Id=1, Title="Титаник" }, 
-            new Movie{ Id=2, Title="Марсианин"}, 
-            new Movie{ Id=3, Title="Черная пантера"}, 
+         List<Movie> movies = new List<Movie>
+         {
+            new Movie{ Id=1, Title="Титаник" },
+            new Movie{ Id=2, Title="Марсианин"},
+            new Movie{ Id=3, Title="Черная пантера"},
             new Movie{ Id=4, Title="Дэдпул 2"}
          };
 
