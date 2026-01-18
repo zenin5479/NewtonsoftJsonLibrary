@@ -54,8 +54,6 @@ namespace NewtonsoftJsonLibrary
             i++;
          }
       }
-
-
    }
 
    class Movie
