@@ -11,8 +11,8 @@ namespace NewtonsoftJsonLibrary
          // Создание объекта
          User user = new User
          {
-            UserName = "john_doe",
-            Email = "john@example.com",
+            UserName = "Мишель Трахтенберг",
+            Email = "Michelle@example.com",
             IsActive = true,
             Roles = { "Admin", "Editor" }
          };
