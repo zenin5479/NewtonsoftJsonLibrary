@@ -38,9 +38,6 @@ namespace NewtonsoftJsonLibrary
          Console.WriteLine(json2);
 
          // Десериализация полного объекта
-         //string jsonString =
-         //   @"{""UserName"": ""alice_smith"",""Email"": ""alice@example.com"",""IsActive"": false,""Roles"": [""User""]}";
-
          User deserializedUser = JsonConvert.DeserializeObject<User>(json2);
          Console.WriteLine($"Имя пользователя: {deserializedUser.UserName}");
          Console.WriteLine($"Email: {deserializedUser.Email}");
