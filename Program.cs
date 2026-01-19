@@ -27,9 +27,9 @@ namespace NewtonsoftJsonLibrary
          };
 
          // 1. Простая сериализация
-         string jsonSerialize = JsonConvert.SerializeObject(user);
+         string jsonserialize = JsonConvert.SerializeObject(user);
          Console.WriteLine("1. Простая сериализация:");
-         Console.WriteLine(jsonSerialize);
+         Console.WriteLine(jsonserialize);
 
          // 2. Сериализация с форматированием (читаемый JSON)
          string jsonserializeformatting = JsonConvert.SerializeObject(user, Formatting.Indented);
