@@ -14,7 +14,7 @@ namespace NewtonsoftJsonLibrary
             UserName = "Мишель Трахтенберг",
             Email = "michelletrachtenberg@example.com",
             IsActive = true,
-            Roles = { "Admin", "Editor" }
+            Roles = { "Actress", "Editor" }
          };
 
          // 1. Простая сериализация
