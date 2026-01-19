@@ -9,7 +9,7 @@ namespace NewtonsoftJsonLibrary
       static void Main()
       {
          // Создание объекта
-         var user = new User
+         User user = new User
          {
             UserName = "john_doe",
             Email = "john@example.com",
