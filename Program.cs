@@ -12,7 +12,7 @@ namespace NewtonsoftJsonLibrary
          User user = new User
          {
             UserName = "Мишель Трахтенберг",
-            Email = "Michelle@example.com",
+            Email = "michelletrachtenberg@example.com",
             IsActive = true,
             Roles = { "Admin", "Editor" }
          };
