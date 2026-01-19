@@ -27,18 +27,18 @@ namespace NewtonsoftJsonLibrary
          };
 
          // 1. Простая сериализация
-         string jsonserialize = JsonConvert.SerializeObject(user);
+         string json = JsonConvert.SerializeObject(user);
          Console.WriteLine("1. Простая сериализация:");
-         Console.WriteLine(jsonserialize);
+         Console.WriteLine(json);
          // {"UserName":"Мишель Трахтенберг","Email":"michelletrachtenberg@example.com","IsActive":true,"Roles":["Actress","Producer"]}
 
          // 2. Сериализация с форматированием (читаемый JSON)
-         string json2 = JsonConvert.SerializeObject(user, Formatting.Indented);
+         string jsonFormatting = JsonConvert.SerializeObject(user, Formatting.Indented);
          Console.WriteLine("\n2. Сериализация с форматированием:");
-         Console.WriteLine(json2);
+         Console.WriteLine(jsonFormatting);
 
          // Десериализация полного объекта
-         User deserializedUser = JsonConvert.DeserializeObject<User>(json2);
+         User deserializedUser = JsonConvert.DeserializeObject<User>(jsonFormatting);
          Console.WriteLine($"Имя пользователя: {deserializedUser.UserName}");
          Console.WriteLine($"Email: {deserializedUser.Email}");
          Console.WriteLine($"Активен: {deserializedUser.IsActive}");
