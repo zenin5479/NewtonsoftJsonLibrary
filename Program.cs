@@ -27,22 +27,21 @@ namespace NewtonsoftJsonLibrary
          };
 
          // 1. Простая сериализация
-         string json = JsonConvert.SerializeObject(user);
+         string jsonSerialize = JsonConvert.SerializeObject(user);
          Console.WriteLine("1. Простая сериализация:");
-         Console.WriteLine(json);
-         // {"UserName":"Мишель Трахтенберг","Email":"michelletrachtenberg@example.com","IsActive":true,"Roles":["Actress","Producer"]}
+         Console.WriteLine(jsonSerialize);
 
          // 2. Сериализация с форматированием (читаемый JSON)
-         string jsonFormatting = JsonConvert.SerializeObject(user, Formatting.Indented);
+         string jsonSerializeformatting = JsonConvert.SerializeObject(user, Formatting.Indented);
          Console.WriteLine("\n2. Сериализация с форматированием:");
-         Console.WriteLine(jsonFormatting);
+         Console.WriteLine(jsonSerializeformatting);
 
          // Десериализация полного объекта
-         User deserializedUser = JsonConvert.DeserializeObject<User>(jsonFormatting);
-         Console.WriteLine($"Имя пользователя: {deserializedUser.UserName}");
-         Console.WriteLine($"Email: {deserializedUser.Email}");
-         Console.WriteLine($"Активен: {deserializedUser.IsActive}");
-         Console.WriteLine($"Роли: {string.Join(", ", deserializedUser.Roles)}");
+         User jsondeserialized = JsonConvert.DeserializeObject<User>(jsonSerializeformatting);
+         Console.WriteLine($"Имя пользователя: {jsondeserialized.UserName}");
+         Console.WriteLine($"Email: {jsondeserialized.Email}");
+         Console.WriteLine($"Активен: {jsondeserialized.IsActive}");
+         Console.WriteLine($"Роли: {string.Join(", ", jsondeserialized.Roles)}");
       }
 
       // Базовая сериализация/десериализация
