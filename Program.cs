@@ -63,7 +63,7 @@ namespace NewtonsoftJsonLibrary
          Console.WriteLine("Id: " + newMovie.Id);
          Console.WriteLine("Title: " + newMovie.Title);
 
-         Console.WriteLine("\n3.Сериализация коллекции");
+         Console.WriteLine("\n3. Сериализация коллекции");
          // 3. Сериализация коллекции
          List<Movie> movies = new List<Movie>
          {
@@ -76,7 +76,7 @@ namespace NewtonsoftJsonLibrary
          string collectionResult = JsonConvert.SerializeObject(movies);
          Console.WriteLine(collectionResult);
 
-         Console.WriteLine("\nДесериализация коллекции");
+         Console.WriteLine("\n4.Десериализация коллекции");
          // 4. Десериализация коллекции
          List<Movie> newMovies = JsonConvert.DeserializeObject<List<Movie>>(collectionResult);
          int i = 0;
