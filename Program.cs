@@ -41,7 +41,7 @@ namespace NewtonsoftJsonLibrary
          Console.WriteLine("Имя пользователя: {0}", jsondeserialized.UserName);
          Console.WriteLine("Email: {0}", jsondeserialized.Email);
          Console.WriteLine("Активен: {0}", jsondeserialized.IsActive);
-         Console.WriteLine(string.Format("Роли: {0}", string.Join(", ", jsondeserialized.Roles)));
+         Console.WriteLine("Роли: {0}", string.Join(", ", jsondeserialized.Roles));
       }
 
       // Базовая сериализация/десериализация объекта
