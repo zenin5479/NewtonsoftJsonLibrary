@@ -33,11 +33,11 @@ namespace NewtonsoftJsonLibrary
 
          // 2. Сериализация с форматированием (читаемый JSON)
          string jsonserializeformatting = JsonConvert.SerializeObject(user, Formatting.Indented);
-         Console.WriteLine("\n2. Сериализация с форматированием:");
+         Console.WriteLine("\n2. Сериализация объекта с форматированием:");
          Console.WriteLine(jsonserializeformatting);
 
          // Десериализация объекта
-         Console.WriteLine("\nДесериализация объекта");
+         Console.WriteLine("\n3Десериализация объекта");
          User jsondeserialized = JsonConvert.DeserializeObject<User>(jsonserializeformatting);
          Console.WriteLine("Имя пользователя: {0}", jsondeserialized.UserName);
          Console.WriteLine("Email: {0}", jsondeserialized.Email);
