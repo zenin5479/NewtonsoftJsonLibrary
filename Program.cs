@@ -48,7 +48,7 @@ namespace NewtonsoftJsonLibrary
       // Сериализация с форматированием (читаемый JSON)
       static void CaseOne()
       {
-         Console.WriteLine("Сериализация объекта");
+         Console.WriteLine("1. Сериализация объекта");
          // 1. Сериализация
          Movie movie = new Movie { Id = 1, Title = "Миссия невыполнима" };
          // movie - объект, преобразуем его в строку с помощью JsonConvert.SerializeObject           
