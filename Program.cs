@@ -37,7 +37,7 @@ namespace NewtonsoftJsonLibrary
          Console.WriteLine(jsonserializeformatting);
 
          // Десериализация объекта
-         Console.WriteLine("\n3.Десериализация объекта");
+         Console.WriteLine("\n3. Десериализация объекта");
          User jsondeserialized = JsonConvert.DeserializeObject<User>(jsonserializeformatting);
          Console.WriteLine("Имя пользователя: {0}", jsondeserialized.UserName);
          Console.WriteLine("Email: {0}", jsondeserialized.Email);
