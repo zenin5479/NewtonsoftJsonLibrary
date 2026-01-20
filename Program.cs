@@ -63,7 +63,7 @@ namespace NewtonsoftJsonLibrary
          Console.WriteLine("Id: " + newMovie.Id);
          Console.WriteLine("Title: " + newMovie.Title);
 
-         Console.WriteLine("\nСериализация коллекции");
+         Console.WriteLine("\n3.Сериализация коллекции");
          // 3. Сериализация коллекции
          List<Movie> movies = new List<Movie>
          {
