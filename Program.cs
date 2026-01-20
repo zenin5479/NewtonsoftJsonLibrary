@@ -44,7 +44,7 @@ namespace NewtonsoftJsonLibrary
          Console.WriteLine("Роли: {0}", string.Join(", ", jsondeserialized.Roles));
       }
 
-      // Базовая сериализация/десериализация объекта
+      // Сериализация с форматированием (читаемый JSON)
       static void CaseOne()
       {
          Console.WriteLine("Сериализация объекта");
