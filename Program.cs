@@ -19,8 +19,7 @@ namespace NewtonsoftJsonLibrary
 
           // Форматированный JSON
          string json = JsonConvert.SerializeObject(eventItem, Formatting.Indented);
-
-         Console.WriteLine("Сериализация по умолчанию:");
+         Console.WriteLine("Сериализация с форматированием (читаемый JSON):");
          Console.WriteLine(json);
          /*
          {
