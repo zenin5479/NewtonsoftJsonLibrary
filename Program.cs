@@ -98,7 +98,7 @@ namespace NewtonsoftJsonLibrary
       public List<string> Roles { get; set; } = new List<string>();
    }
 
-   // Класс - Пользователь
+   // Класс - Фильмы
 
    class Movie
    {
