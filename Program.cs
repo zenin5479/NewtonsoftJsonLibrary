@@ -17,10 +17,10 @@ namespace NewtonsoftJsonLibrary
             Duration = TimeSpan.FromHours(8)
          };
 
-         
+          // Форматированный JSON
          string json = JsonConvert.SerializeObject(eventItem, Formatting.Indented);
 
-         // Форматированный JSON
+        
 
          Console.WriteLine("Сериализация по умолчанию:");
          Console.WriteLine(json);
