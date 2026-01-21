@@ -68,7 +68,7 @@ namespace NewtonsoftJsonLibrary
          List<Movie> movies = new List<Movie>
          {
             new Movie(1, "Титаник"),
-            new Movie(2, title: "Марсианин"),
+            new Movie(2, "Марсианин"),
             new Movie(3, title : "Черная пантера"),
             new Movie(4, title : "Дэдпул 2")
          };
