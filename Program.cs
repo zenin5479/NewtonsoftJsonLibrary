@@ -8,7 +8,7 @@ namespace NewtonsoftJsonLibrary
    {
       static void Main()
       {
-         var eventItem = new Event
+         Event eventItem = new Event
          {
             Name = "Конференция",
             Date = new DateTime(2024, 6, 15, 10, 0, 0, DateTimeKind.Utc),
