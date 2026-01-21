@@ -70,7 +70,7 @@ namespace NewtonsoftJsonLibrary
             new Movie(1, "Титаник"),
             new Movie(2, "Марсианин"),
             new Movie(3, "Черная пантера"),
-            new Movie(4, title : "Дэдпул 2")
+            new Movie(4, "Дэдпул 2")
          };
 
          string collectionResult = JsonConvert.SerializeObject(movies);
