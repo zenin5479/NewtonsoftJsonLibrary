@@ -67,7 +67,7 @@ namespace NewtonsoftJsonLibrary
          // 3. Сериализация коллекции
          List<Movie> movies = new List<Movie>
          {
-            new Movie(1, title: "Титаник"),
+            new Movie(1, "Титаник"),
             new Movie(2, title: "Марсианин"),
             new Movie(3, title : "Черная пантера"),
             new Movie(4, title : "Дэдпул 2")
