@@ -2,12 +2,46 @@
 using System;
 using System.Collections.Generic;
 
+
 namespace NewtonsoftJsonLibrary
 {
    internal class Program
    {
       static void Main()
       {
+         var eventItem = new Event
+         {
+            Name = "Конференция",
+            Date = new DateTime(2024, 6, 15, 10, 0, 0, DateTimeKind.Utc),
+            OptionalDate = null,
+            DateWithOffset = new DateTimeOffset(2024, 6, 15, 10, 0, 0, TimeSpan.FromHours(3)),
+            Duration = TimeSpan.FromHours(8)
+         };
+
+         // Сериализация по умолчанию
+         string json = JsonConvert.SerializeObject(eventItem, Formatting.Indented);
+
+         // Форматированный JSON
+
+         Console.WriteLine("Сериализация по умолчанию:");
+         Console.WriteLine(json);
+         /*
+         {
+           "Name": "Конференция",
+           "Date": "2024-06-15T10:00:00Z",
+           "OptionalDate": null,
+           "DateWithOffset": "2024-06-15T10:00:00+03:00",
+           "Duration": "08:00:00"
+         }
+         */
+
+         // Десериализация
+         Event deserializedEvent = JsonSerializer.Deserialize<Event>(json);
+         Console.WriteLine($"\nДесериализованная дата: {deserializedEvent.Date}");
+         Console.WriteLine($"Kind: {deserializedEvent.Date.Kind}"); // Unspecified (по умолчанию)
+
+
+
          CaseOne();
          Console.WriteLine();
          CaseTwo();
