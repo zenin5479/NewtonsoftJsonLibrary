@@ -21,15 +21,6 @@ namespace NewtonsoftJsonLibrary
          string json = JsonConvert.SerializeObject(eventItem, Formatting.Indented);
          Console.WriteLine("Сериализация с форматированием (читаемый JSON):");
          Console.WriteLine(json);
-         /*
-         {
-           "Name": "Конференция",
-           "Date": "2024-06-15T10:00:00Z",
-           "OptionalDate": null,
-           "DateWithOffset": "2024-06-15T10:00:00+03:00",
-           "Duration": "08:00:00"
-         }
-         */
 
          // Десериализация
          Event deserializedEvent = JsonConvert.DeserializeObject<Event>(json);
