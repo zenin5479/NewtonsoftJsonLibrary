@@ -99,7 +99,6 @@ namespace NewtonsoftJsonLibrary
    }
 
    // Класс - Фильмы
-
    class Movie
    {
       public int Id { get; set; }
