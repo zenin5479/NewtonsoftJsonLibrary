@@ -35,7 +35,7 @@ namespace NewtonsoftJsonLibrary
          */
 
          // Десериализация
-         Event deserializedEvent = JsonSerializer.Deserialize<Event>(json);
+         Event deserializedEvent = JsonConvert.DeserializeObject<Event>(json);
          Console.WriteLine($"\nДесериализованная дата: {deserializedEvent.Date}");
          Console.WriteLine($"Kind: {deserializedEvent.Date.Kind}"); // Unspecified (по умолчанию)
 
