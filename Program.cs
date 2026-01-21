@@ -50,7 +50,7 @@ namespace NewtonsoftJsonLibrary
       {
          Console.WriteLine("1. Сериализация объекта");
          // 1. Сериализация
-         Movie movie = new Movie(1, "Миссия невыполнима");
+         Movie movie = new Movie { Id = 1, Title = "Миссия невыполнима" };
          // movie - объект, преобразуем его в строку с помощью JsonConvert.SerializeObject           
          string result = JsonConvert.SerializeObject(movie);
          // Преобразуется в строку в виде {"Id": 1,"Title": "Миссия невыполнима"}
@@ -67,10 +67,10 @@ namespace NewtonsoftJsonLibrary
          // 3. Сериализация коллекции
          List<Movie> movies = new List<Movie>
          {
-            new Movie(1, "Титаник"),
-            new Movie(2, "Марсианин"),
-            new Movie(3, "Черная пантера"),
-            new Movie(4, "Дэдпул 2")
+            new Movie{ Id=1, Title="Титаник" },
+            new Movie{ Id=2, Title="Марсианин"},
+            new Movie{ Id=3, Title="Черная пантера"},
+            new Movie{ Id=4, Title="Дэдпул 2"}
          };
 
          string collectionResult = JsonConvert.SerializeObject(movies);
@@ -101,16 +101,6 @@ namespace NewtonsoftJsonLibrary
    // Класс - Фильмы
    class Movie
    {
-      public Movie()
-      {
-      }
-
-      public Movie(int id, string title)
-      {
-         Id = id;
-         Title = title;
-      }
-
       public int Id { get; set; }
       public string Title { get; set; }
    }
