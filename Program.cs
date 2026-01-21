@@ -89,6 +89,15 @@ namespace NewtonsoftJsonLibrary
       }
    }
 
+   public class Event
+   {
+      public string Name { get; set; }
+      public DateTime Date { get; set; }
+      public DateTime? OptionalDate { get; set; } // Nullable
+      public DateTimeOffset DateWithOffset { get; set; }
+      public TimeSpan Duration { get; set; }
+   }
+
    // Класс - Пользователь
    public class User
    {
