@@ -65,13 +65,11 @@ namespace NewtonsoftJsonLibrary
 
          Console.WriteLine("\n3. Сериализация коллекции");
          // 3. Сериализация коллекции
-         List<Movie> movies = new List<Movie>
-         {
-            new Movie(id: 1, title: "Титаник"),
-            new Movie(id: 2, title: "Марсианин"),
-            new Movie(id : 3, title : "Черная пантера"),
-            new Movie(id : 4, title : "Дэдпул 2")
-         };
+         List<Movie> movies = new List<Movie>();
+         movies.Add(new Movie(id: 1, title: "Титаник"));
+         movies.Add(new Movie(id: 2, title: "Марсианин"));
+         movies.Add(new Movie(id : 3, title : "Черная пантера"));
+         movies.Add(new Movie(id : 4, title : "Дэдпул 2"));
 
          string collectionResult = JsonConvert.SerializeObject(movies);
          Console.WriteLine(collectionResult);
