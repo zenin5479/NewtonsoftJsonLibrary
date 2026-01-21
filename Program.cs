@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 
-
 namespace NewtonsoftJsonLibrary
 {
    internal class Program
