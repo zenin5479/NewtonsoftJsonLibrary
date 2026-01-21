@@ -39,8 +39,6 @@ namespace NewtonsoftJsonLibrary
          Console.WriteLine($"\nДесериализованная дата: {deserializedEvent.Date}");
          Console.WriteLine($"Kind: {deserializedEvent.Date.Kind}"); // Unspecified (по умолчанию)
 
-
-
          CaseOne();
          Console.WriteLine();
          CaseTwo();
