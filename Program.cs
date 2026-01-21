@@ -89,7 +89,7 @@ namespace NewtonsoftJsonLibrary
       }
    }
 
-   // Простой класс
+   // Класс - Пользователь
    public class User
    {
       public string UserName { get; set; }
