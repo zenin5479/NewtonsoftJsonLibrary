@@ -11,10 +11,9 @@ namespace NewtonsoftJsonLibrary
          Event eventItem = new Event
          {
             Name = "Конференция",
-            Date = new DateTime(2024, 6, 15, 10, 0, 0, DateTimeKind.Utc),
+            Date = DateTime.UtcNow,
             DateUtc = DateTime.Now,
-            DateToday = DateTime.Today,
-            DateTime.UtcNow,
+            DateToday = DateTime.Today
 
 
             Duration = TimeSpan.FromHours(8)
