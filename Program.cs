@@ -1,7 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace NewtonsoftJsonLibrary
 {
@@ -111,13 +110,7 @@ namespace NewtonsoftJsonLibrary
    }
 
 
-   // Сгенерировать временную метку
-   string GenerateTimeStamp()
-   {
-      string msg = null;
-      string timeStamp = msg == "" ? ((int)DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1)).TotalSeconds) + "000" : msg;
-      return timeStamp;
-   }
+
 
 
    public class Event
