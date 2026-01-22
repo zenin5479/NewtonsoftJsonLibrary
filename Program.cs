@@ -118,7 +118,7 @@ namespace NewtonsoftJsonLibrary
       public string Name { get; set; }
       public DateTime Date { get; set; }
       public DateTime DateUtc { get; set; }
-      public TimeSpan DateToday { get; set; }
+      public DateTime DateToday { get; set; }
    }
 
    // Класс - Пользователь
