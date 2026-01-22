@@ -10,9 +10,9 @@ namespace NewtonsoftJsonLibrary
       {
          Event eventItem = new Event
          {
-            Name = "Конференция",
-            Date = DateTime.UtcNow,
-            DateUtc = DateTime.Now,
+            Name = "Структура DateTime",
+            Date = DateTime.Now,
+            DateUtc = DateTime.UtcNow,
             DateToday = DateTime.Today,
             TimeStamp = (int)DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1)).TotalSeconds + "000"
          };
