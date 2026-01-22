@@ -14,7 +14,7 @@ namespace NewtonsoftJsonLibrary
             Date = DateTime.UtcNow,
             DateUtc = DateTime.Now,
             DateToday = DateTime.Today,
-            TimeStamp = ((int)DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1)).TotalSeconds) + "000"
+            TimeStamp = (int)DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1)).TotalSeconds + "000"
          };
 
          // Форматированный JSON
