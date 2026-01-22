@@ -58,7 +58,6 @@ namespace NewtonsoftJsonLibrary
 
       }
 
-
       // Базовая сериализация/десериализация объекта
       static void CaseTwo()
       {
