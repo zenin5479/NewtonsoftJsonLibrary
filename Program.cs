@@ -34,7 +34,11 @@ namespace NewtonsoftJsonLibrary
          Console.ReadKey();
       }
 
+      static void CaseThree()
+      {
 
+
+      }
 
 
       // Базовая сериализация/десериализация объекта
