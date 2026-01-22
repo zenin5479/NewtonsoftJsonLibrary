@@ -15,9 +15,6 @@ namespace NewtonsoftJsonLibrary
             DateUtc = DateTime.Now,
             DateToday = DateTime.Today
 
-
-            Duration = TimeSpan.FromHours(8)
-
          };
 
          // Форматированный JSON
