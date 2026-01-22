@@ -39,7 +39,6 @@ namespace NewtonsoftJsonLibrary
          Console.WriteLine("\nДесериализованная дата: {0}", deserializedEvent.Date);
          // Unspecified (по умолчанию)
          Console.WriteLine("Kind: {0}", deserializedEvent.Date.Kind);
-
       }
 
       // Базовая сериализация/десериализация объекта
@@ -117,6 +116,7 @@ namespace NewtonsoftJsonLibrary
       }
    }
 
+   // Класс - Событие (время)
    public class Event
    {
       public string Name { get; set; }
