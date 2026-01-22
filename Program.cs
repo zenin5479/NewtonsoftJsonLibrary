@@ -13,11 +13,11 @@ namespace NewtonsoftJsonLibrary
             Name = "Конференция",
             Date = new DateTime(2024, 6, 15, 10, 0, 0, DateTimeKind.Utc),
             DateUtc = DateTime.Now,
-            
+            DateToday = DateTime.Today,
             DateTime.UtcNow,
-            DateTime.Today
 
-         Duration = TimeSpan.FromHours(8)
+
+            Duration = TimeSpan.FromHours(8)
 
          };
 
