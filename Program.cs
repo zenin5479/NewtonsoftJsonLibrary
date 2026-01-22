@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace NewtonsoftJsonLibrary
 {
@@ -13,7 +14,8 @@ namespace NewtonsoftJsonLibrary
             Name = "Конференция",
             Date = DateTime.UtcNow,
             DateUtc = DateTime.Now,
-            DateToday = DateTime.Today
+            DateToday = DateTime.Today,
+            TimeStamp = ((int)DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1)).TotalSeconds) + "000"
          };
 
          // Форматированный JSON
@@ -108,12 +110,24 @@ namespace NewtonsoftJsonLibrary
       }
    }
 
+
+   // Сгенерировать временную метку
+   string GenerateTimeStamp()
+   {
+      string msg = null;
+      string timeStamp = msg == "" ? ((int)DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1)).TotalSeconds) + "000" : msg;
+      return timeStamp;
+   }
+
+
    public class Event
    {
       public string Name { get; set; }
       public DateTime Date { get; set; }
       public DateTime DateUtc { get; set; }
       public DateTime DateToday { get; set; }
+      public string Datas { get; set; }
+      public string TimeStamp { get; set; }
    }
 
    // Класс - Пользователь
