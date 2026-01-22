@@ -12,8 +12,13 @@ namespace NewtonsoftJsonLibrary
          {
             Name = "Конференция",
             Date = new DateTime(2024, 6, 15, 10, 0, 0, DateTimeKind.Utc),
-            DateWith = DateTime.Now,
-            Duration = TimeSpan.FromHours(8)
+            DateUtc = DateTime.Now,
+            
+            DateTime.UtcNow,
+            DateTime.Today
+
+         Duration = TimeSpan.FromHours(8)
+
          };
 
          // Форматированный JSON
@@ -112,8 +117,8 @@ namespace NewtonsoftJsonLibrary
    {
       public string Name { get; set; }
       public DateTime Date { get; set; }
-      public DateTime DateWith { get; set; }
-      public TimeSpan Duration { get; set; }
+      public DateTime DateUtc { get; set; }
+      public TimeSpan DateToday { get; set; }
    }
 
    // Класс - Пользователь
