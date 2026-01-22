@@ -109,10 +109,6 @@ namespace NewtonsoftJsonLibrary
       }
    }
 
-
-
-
-
    public class Event
    {
       public string Name { get; set; }
