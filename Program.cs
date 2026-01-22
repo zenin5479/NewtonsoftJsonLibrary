@@ -17,6 +17,7 @@ namespace NewtonsoftJsonLibrary
          Console.ReadKey();
       }
 
+      // Сериализация/десериализация объекта точного времени в Unix‑timestamp в миллисекундах (13‑значное число)
       static void CaseThree()
       {
          Event eventItem = new Event
