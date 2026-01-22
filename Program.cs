@@ -12,7 +12,7 @@ namespace NewtonsoftJsonLibrary
          {
             Name = "Конференция",
             Date = new DateTime(2024, 6, 15, 10, 0, 0, DateTimeKind.Utc),
-            DateWithOffset = new DateTimeOffset(2024, 6, 15, 10, 0, 0, TimeSpan.FromHours(3)),
+            DateWith = new DateTime.,
             Duration = TimeSpan.FromHours(8)
          };
 
@@ -112,7 +112,7 @@ namespace NewtonsoftJsonLibrary
    {
       public string Name { get; set; }
       public DateTime Date { get; set; }
-      public DateTimeOffset DateWithOffset { get; set; }
+      public DateTime DateWith { get; set; }
       public TimeSpan Duration { get; set; }
    }
 
