@@ -8,25 +8,7 @@ namespace NewtonsoftJsonLibrary
    {
       static void Main()
       {
-         Event eventItem = new Event
-         {
-            Name = "Структура DateTime",
-            Date = DateTime.Now,
-            DateUtc = DateTime.UtcNow,
-            DateToday = DateTime.Today,
-            TimeStamp = (int)DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1)).TotalSeconds + "000"
-         };
-
-         // Форматированный JSON
-         string json = JsonConvert.SerializeObject(eventItem, Formatting.Indented);
-         Console.WriteLine("Сериализация с форматированием (читаемый JSON):");
-         Console.WriteLine(json);
-
-         // Десериализация
-         Event deserializedEvent = JsonConvert.DeserializeObject<Event>(json);
-         Console.WriteLine("\nДесериализованная дата: {0}", deserializedEvent.Date);
-         // Unspecified (по умолчанию)
-         Console.WriteLine("Kind: {0}", deserializedEvent.Date.Kind);
+         
 
          CaseOne();
          Console.WriteLine();
