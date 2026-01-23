@@ -27,8 +27,8 @@ namespace NewtonsoftJsonLibrary
 
          // 2. Через DateTime.UtcNow и вычитание эпохи
          DateTime epoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
-         DateTime now = DateTime.UtcNow;
-         TimeSpan span = now - epoch;
+         DateTime thistime = DateTime.UtcNow;
+         TimeSpan span = thistime - epoch;
          long timestampUtcNow = (long)span.TotalMilliseconds;
          Console.WriteLine(timestampUtcNow);
 
@@ -37,7 +37,6 @@ namespace NewtonsoftJsonLibrary
          long unixTimestampMs = rightnow.ToUnixTimeMilliseconds();
          Console.WriteLine(unixTimestampMs);
 
-         atthistime
 
       }
 
