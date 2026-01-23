@@ -22,15 +22,15 @@ namespace NewtonsoftJsonLibrary
       static void CaseFour()
       {
          // 1. Через DateTimeOffset.UtcNow.ToUnixTimeMilliseconds()
-         long TimestampOffset = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
-         Console.WriteLine(TimestampOffset);
+         long timestampOffset = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+         Console.WriteLine(timestampOffset);
 
          // 2. Через DateTime.UtcNow и вычитание эпохи
          DateTime epoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
          DateTime now = DateTime.UtcNow;
          TimeSpan span = now - epoch;
-         long unixTimestampsMUtcNow = (long)span.TotalMilliseconds;
-         Console.WriteLine(unixTimestampsMUtcNow);
+         long TimestampUtcNow = (long)span.TotalMilliseconds;
+         Console.WriteLine(TimestampUtcNow);
 
       }
 
