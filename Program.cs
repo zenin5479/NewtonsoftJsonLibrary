@@ -33,8 +33,8 @@ namespace NewtonsoftJsonLibrary
          DateTime epoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
          DateTime thistime = DateTime.UtcNow;
          TimeSpan span = thistime - epoch;
-         long timestampUtcNow = (long)span.TotalMilliseconds;
-         Console.WriteLine(timestampUtcNow);
+         long timestamputcnow = (long)span.TotalMilliseconds;
+         Console.WriteLine(timestamputcnow);
 
          // 3. Через DateTimeOffset с явным преобразованием
          Console.WriteLine("3. Через DateTimeOffset с явным преобразованием");
