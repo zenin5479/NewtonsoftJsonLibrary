@@ -19,6 +19,12 @@ namespace NewtonsoftJsonLibrary
          Console.ReadKey();
       }
 
+
+      static void CaseFive()
+      {
+
+      }
+      
       // Точное время в Unix‑timestamp в миллисекундах (13‑значное число)
       static void CaseFour()
       {
@@ -43,6 +49,8 @@ namespace NewtonsoftJsonLibrary
          long timestampoffsetconvert = rightnow.ToUnixTimeMilliseconds();
          Console.WriteLine("Unix timestamp (ms): {0}", timestampoffsetconvert);
       }
+
+
 
       // Сериализация/десериализация точного времени в Unix‑timestamp в миллисекундах (13‑значное число)
       static void CaseThree()
