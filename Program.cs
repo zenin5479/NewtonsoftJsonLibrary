@@ -24,6 +24,9 @@ namespace NewtonsoftJsonLibrary
          // 1. Через DateTimeOffset.UtcNow.ToUnixTimeMilliseconds()
          long unixTimestampMs = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
          Console.WriteLine(unixTimestampMs);
+
+         // 2. Через DateTime.UtcNow и вычитание эпохи
+
       }
 
       // Сериализация/десериализация точного времени в Unix‑timestamp в миллисекундах (13‑значное число)
