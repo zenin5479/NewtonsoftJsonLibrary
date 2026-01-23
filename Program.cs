@@ -115,6 +115,13 @@ namespace NewtonsoftJsonLibrary
          Event deserializedEvent = JsonConvert.DeserializeObject<Event>(json);
          Console.WriteLine("\nДесериализованная дата: {0}", deserializedEvent.Date);
          // Unspecified (по умолчанию)
+
+         // Имя 	Значение 	Описание
+
+         // Local 	2        Представленное время является местным
+         // Unspecified 	0 	Представленное время не определено ни как местное, ни как время UTC
+
+
          Console.WriteLine("Kind: {0}", deserializedEvent.Date.Kind);
       }
 
