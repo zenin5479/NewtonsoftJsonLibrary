@@ -29,8 +29,8 @@ namespace NewtonsoftJsonLibrary
          DateTime epoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
          DateTime now = DateTime.UtcNow;
          TimeSpan span = now - epoch;
-         long TimestampUtcNow = (long)span.TotalMilliseconds;
-         Console.WriteLine(TimestampUtcNow);
+         long timestampUtcNow = (long)span.TotalMilliseconds;
+         Console.WriteLine(timestampUtcNow);
 
       }
 
