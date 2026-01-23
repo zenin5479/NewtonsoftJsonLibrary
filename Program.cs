@@ -119,9 +119,9 @@ namespace NewtonsoftJsonLibrary
          // Имя         Значение 	Описание
          // Local          2        Представленное время является местным
          // Unspecified    0 	      Представленное время не определено ни как местное, ни как время UTC
-         // Utc            1        Представленное время является временем UTC.
-
-                  Console.WriteLine("Kind: {0}", deserializedEvent.Date.Kind);
+         // Utc            1        Представленное время является временем UTC
+         
+         Console.WriteLine("Kind: {0}", deserializedEvent.Date.Kind);
       }
 
       // Базовая сериализация/десериализация объекта
