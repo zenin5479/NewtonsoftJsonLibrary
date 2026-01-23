@@ -22,6 +22,7 @@ namespace NewtonsoftJsonLibrary
       static void CaseFour()
       {
          // 1. Через DateTimeOffset.UtcNow.ToUnixTimeMilliseconds()
+         Console.WriteLine("1. Через DateTimeOffset.UtcNow.ToUnixTimeMilliseconds()");
          long timestampOffset = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
          Console.WriteLine(timestampOffset);
 
