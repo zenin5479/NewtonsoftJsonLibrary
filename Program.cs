@@ -53,8 +53,8 @@ namespace NewtonsoftJsonLibrary
             Date = DateTime.Now,
             DateUtc = DateTime.UtcNow,
             DateToday = DateTime.Today,
-            TimeStamp = (int)DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1)).TotalSeconds + "000"
-         };
+            TimeStamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds;
+      };
 
          // Форматированный JSON
          string json = JsonConvert.SerializeObject(eventItem, Formatting.Indented);
