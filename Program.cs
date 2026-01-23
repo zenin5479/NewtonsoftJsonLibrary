@@ -19,7 +19,9 @@ namespace NewtonsoftJsonLibrary
 
       static void CaseFour()
       {
-
+         // 1. Через DateTimeOffset.UtcNow.ToUnixTimeMilliseconds()
+         long unixTimestampMs = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+         Console.WriteLine(unixTimestampMs);
       }
 
       // Сериализация/десериализация точного времени в Unix‑timestamp в миллисекундах (13‑значное число)
