@@ -34,13 +34,13 @@ namespace NewtonsoftJsonLibrary
          DateTime thistime = DateTime.UtcNow;
          TimeSpan span = thistime - epoch;
          long timestamputcnow = (long)span.TotalMilliseconds;
-         Console.WriteLine(timestamputcnow);
+         Console.WriteLine("Unix timestamp (ms): {0}", timestamputcnow);
 
          // 3. Через DateTimeOffset с явным преобразованием
          Console.WriteLine("3. Через DateTimeOffset с явным преобразованием");
          DateTimeOffset rightnow = DateTimeOffset.UtcNow;
          long timestampoffsetconvert = rightnow.ToUnixTimeMilliseconds();
-         Console.WriteLine(timestampoffsetconvert);
+         Console.WriteLine("Unix timestamp (ms): {0}", timestampoffsetconvert);
 
          long timestamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
          Console.WriteLine("Unix timestamp (ms): {0}", timestamp);
