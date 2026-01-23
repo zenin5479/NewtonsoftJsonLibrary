@@ -23,8 +23,8 @@ namespace NewtonsoftJsonLibrary
 
       static void CaseFive()
       {
-         Console.WriteLine($"Текущее UTC время: {DateTime.UtcNow:yyyy-MM-dd HH:mm:ss.fff}");
-         Console.WriteLine("========================================\n");
+         Console.WriteLine("Текущее UTC время: {0:yyyy-MM-dd HH:mm:ss.fff}", DateTime.UtcNow);
+         Console.WriteLine("==========================================\n");
 
          // Способ 1
          long timestamp1 = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
@@ -72,7 +72,7 @@ namespace NewtonsoftJsonLibrary
       // Точное время в Unix‑timestamp в миллисекундах (13‑значное число)
       static void CaseFour()
       {
-         Console.WriteLine("\nТочное время в Unix‑timestamp в миллисекундах (13‑значное число)");
+         Console.WriteLine("Точное время в Unix‑timestamp в миллисекундах (13‑значное число)");
 
          // 1. Через DateTimeOffset.UtcNow.ToUnixTimeMilliseconds()
          Console.WriteLine("1. Через DateTimeOffset.UtcNow.ToUnixTimeMilliseconds()");
