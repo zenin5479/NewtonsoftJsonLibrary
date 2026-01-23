@@ -41,8 +41,6 @@ namespace NewtonsoftJsonLibrary
          DateTimeOffset rightnow = DateTimeOffset.UtcNow;
          long timestampoffsetconvert = rightnow.ToUnixTimeMilliseconds();
          Console.WriteLine("Unix timestamp (ms): {0}", timestampoffsetconvert);
-
-         
       }
 
       // Сериализация/десериализация точного времени в Unix‑timestamp в миллисекундах (13‑значное число)
