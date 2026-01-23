@@ -19,7 +19,6 @@ namespace NewtonsoftJsonLibrary
          Console.ReadKey();
       }
 
-
       // Точное время в Unix‑timestamp в миллисекундах (13‑значное число)
       static void CaseFour()
       {
