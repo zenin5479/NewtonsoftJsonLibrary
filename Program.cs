@@ -29,6 +29,7 @@ namespace NewtonsoftJsonLibrary
          Console.WriteLine(timestampOffset);
 
          // 2. Через DateTime.UtcNow и вычитание эпохи
+         Console.WriteLine("2. Через DateTime.UtcNow и вычитание эпохи");
          DateTime epoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
          DateTime thistime = DateTime.UtcNow;
          TimeSpan span = thistime - epoch;
