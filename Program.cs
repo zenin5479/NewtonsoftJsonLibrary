@@ -39,8 +39,8 @@ namespace NewtonsoftJsonLibrary
          // 3. Через DateTimeOffset с явным преобразованием
          Console.WriteLine("3. Через DateTimeOffset с явным преобразованием");
          DateTimeOffset rightnow = DateTimeOffset.UtcNow;
-         long TimestampMs = rightnow.ToUnixTimeMilliseconds();
-         Console.WriteLine(TimestampMs);
+         long TimestampOffset = rightnow.ToUnixTimeMilliseconds();
+         Console.WriteLine(TimestampOffset);
       }
 
       // Сериализация/десериализация точного времени в Unix‑timestamp в миллисекундах (13‑значное число)
