@@ -32,6 +32,9 @@ namespace NewtonsoftJsonLibrary
          long timestampUtcNow = (long)span.TotalMilliseconds;
          Console.WriteLine(timestampUtcNow);
 
+         // 3. Через DateTimeOffset с явным преобразованием
+
+
       }
 
       // Сериализация/десериализация точного времени в Unix‑timestamp в миллисекундах (13‑значное число)
