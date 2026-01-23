@@ -26,7 +26,7 @@ namespace NewtonsoftJsonLibrary
          // 1. Через DateTimeOffset.UtcNow.ToUnixTimeMilliseconds()
          Console.WriteLine("1. Через DateTimeOffset.UtcNow.ToUnixTimeMilliseconds()");
          long timestampoffset = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
-         Console.WriteLine(timestampoffset);
+         Console.WriteLine("Unix timestamp (ms): {0}", timestampoffset);
 
          // 2. Через DateTime.UtcNow и вычитание эпохи
          Console.WriteLine("2. Через DateTime.UtcNow и вычитание эпохи");
