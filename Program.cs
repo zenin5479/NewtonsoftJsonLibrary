@@ -8,10 +8,6 @@ namespace NewtonsoftJsonLibrary
    {
       static void Main()
       {
-         
-
-         
-         
          CaseOne();
          Console.WriteLine();
          CaseTwo();
@@ -19,6 +15,11 @@ namespace NewtonsoftJsonLibrary
          CaseThree();
 
          Console.ReadKey();
+      }
+
+      static void CaseFour()
+      {
+
       }
 
       // Сериализация/десериализация точного времени в Unix‑timestamp в миллисекундах (13‑значное число)
