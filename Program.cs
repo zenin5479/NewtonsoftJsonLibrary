@@ -33,7 +33,11 @@ namespace NewtonsoftJsonLibrary
          Console.WriteLine(timestampUtcNow);
 
          // 3. Через DateTimeOffset с явным преобразованием
+         DateTimeOffset rightnow = DateTimeOffset.UtcNow;
+         long unixTimestampMs = rightnow.ToUnixTimeMilliseconds();
+         Console.WriteLine(unixTimestampMs);
 
+         atthistime
 
       }
 
