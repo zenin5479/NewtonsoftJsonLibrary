@@ -43,7 +43,7 @@ namespace NewtonsoftJsonLibrary
          Console.WriteLine(timestampoffsetconvert);
 
          long timestamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
-         Console.WriteLine($"Unix timestamp (ms): {timestamp}");
+         Console.WriteLine(string.Format("Unix timestamp (ms): {0}", timestamp));
          // Вывод: Unix timestamp (ms): 1769158496123
       }
 
