@@ -19,7 +19,6 @@ namespace NewtonsoftJsonLibrary
          Console.ReadKey();
       }
 
-
       static void CaseFive()
       {
 
