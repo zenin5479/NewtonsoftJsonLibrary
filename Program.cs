@@ -49,8 +49,6 @@ namespace NewtonsoftJsonLibrary
          Console.WriteLine("Unix timestamp (ms): {0}", timestampoffsetconvert);
       }
 
-
-
       // Сериализация/десериализация точного времени в Unix‑timestamp в миллисекундах (13‑значное число)
       static void CaseThree()
       {
