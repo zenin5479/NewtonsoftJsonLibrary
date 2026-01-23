@@ -24,7 +24,7 @@ namespace NewtonsoftJsonLibrary
       static void CaseFive()
       {
          Console.WriteLine("Текущее UTC время: {0:yyyy-MM-dd HH:mm:ss.fff}", DateTime.UtcNow);
-         Console.WriteLine("==========================================\n");
+         Console.WriteLine("==========================================");
 
          // Способ 1
          long timestamp1 = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
