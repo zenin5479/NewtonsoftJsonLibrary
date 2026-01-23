@@ -150,7 +150,7 @@ namespace NewtonsoftJsonLibrary
       public DateTime Date { get; set; }
       public DateTime DateUtc { get; set; }
       public DateTime DateToday { get; set; }
-      public string TimeStamp { get; set; }
+      public long TimeStamp { get; set; }
    }
 
    // Класс - Пользователь
