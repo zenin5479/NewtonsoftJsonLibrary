@@ -23,7 +23,50 @@ namespace NewtonsoftJsonLibrary
 
       static void CaseFive()
       {
+         Console.WriteLine($"Текущее UTC время: {DateTime.UtcNow:yyyy-MM-dd HH:mm:ss.fff}");
+         Console.WriteLine("========================================\n");
 
+         // Способ 1
+         long timestamp1 = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+         Console.WriteLine($"Способ 1 (DateTimeOffset.UtcNow.ToUnixTimeMilliseconds()):");
+         Console.WriteLine($"Результат: {timestamp1}");
+         Console.WriteLine($"Длина: {timestamp1.ToString().Length} цифр");
+         Console.WriteLine($"Формат: {timestamp1:#,##0}\n");
+
+         // Способ 2
+         DateTimeOffset dto = DateTimeOffset.UtcNow;
+         long timestamp2 = (dto.Ticks - DateTimeOffset.UnixEpoch.Ticks) / TimeSpan.TicksPerMillisecond;
+         Console.WriteLine($"Способ 2 (Ручной расчет через Ticks):");
+         Console.WriteLine($"Результат: {timestamp2}");
+         Console.WriteLine($"Длина: {timestamp2.ToString().Length} цифр");
+         Console.WriteLine($"Формат: {timestamp2:#,##0}\n");
+
+         // Способ 3
+         DateTimeOffset specificDate = DateTimeOffset.UtcNow;
+         long timestamp3 = new DateTimeOffset(specificDate.UtcDateTime).ToUnixTimeMilliseconds();
+         Console.WriteLine($"Способ 3 (new DateTimeOffset().ToUnixTimeMilliseconds()):");
+         Console.WriteLine($"Результат: {timestamp3}");
+         Console.WriteLine($"Длина: {timestamp3.ToString().Length} цифр");
+         Console.WriteLine($"Формат: {timestamp3:#,##0}\n");
+
+         // Способ 4
+         DateTime now = DateTime.UtcNow;
+         long timestamp4 = DateTimeExtensions.ToUnixTimestampMilliseconds(now);
+         Console.WriteLine($"Способ 4 (Extension-метод):");
+         Console.WriteLine($"Результат: {timestamp4}");
+         Console.WriteLine($"Длина: {timestamp4.ToString().Length} цифр");
+         Console.WriteLine($"Формат: {timestamp4:#,##0}\n");
+
+         // Проверка эквивалентности
+         Console.WriteLine("Проверка эквивалентности:");
+         Console.WriteLine($"Способ 1 == Способ 2: {timestamp1 == timestamp2}");
+         Console.WriteLine($"Способ 2 == Способ 3: {timestamp2 == timestamp3}");
+         Console.WriteLine($"Способ 3 == Способ 4: {timestamp3 == timestamp4}");
+
+         // Конвертация обратно для проверки
+         Console.WriteLine("\nКонвертация обратно в DateTime:");
+         DateTimeOffset dateFromTimestamp = DateTimeOffset.FromUnixTimeMilliseconds(timestamp1);
+         Console.WriteLine($"Из timestamp1: {dateFromTimestamp:yyyy-MM-dd HH:mm:ss.fff}");
       }
       
       // Точное время в Unix‑timestamp в миллисекундах (13‑значное число)
@@ -147,6 +190,14 @@ namespace NewtonsoftJsonLibrary
             Console.WriteLine("Id: " + item.Id + "; " + "Title: " + item.Title);
             i++;
          }
+      }
+   }
+
+   public static class DateTimeExtensions
+   {
+      public static long ToUnixTimestampMilliseconds(DateTime dateTime)
+      {
+         return new DateTimeOffset(dateTime).ToUnixTimeMilliseconds();
       }
    }
 
