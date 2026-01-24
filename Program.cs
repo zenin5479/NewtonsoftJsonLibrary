@@ -44,7 +44,7 @@ namespace NewtonsoftJsonLibrary
          // Способ 3
          DateTimeOffset specificDate = DateTimeOffset.UtcNow;
          long timestamp3 = new DateTimeOffset(specificDate.UtcDateTime).ToUnixTimeMilliseconds();
-         Console.WriteLine($"Способ 3 (new DateTimeOffset().ToUnixTimeMilliseconds()):");
+         Console.WriteLine("Способ 3 (new DateTimeOffset().ToUnixTimeMilliseconds()):");
          Console.WriteLine($"Результат: {timestamp3}");
          Console.WriteLine($"Длина: {timestamp3.ToString().Length} цифр");
          Console.WriteLine($"Формат: {timestamp3:#,##0}\n");
