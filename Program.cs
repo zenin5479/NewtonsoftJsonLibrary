@@ -36,7 +36,7 @@ namespace NewtonsoftJsonLibrary
          // Способ 2
          DateTimeOffset dto = DateTimeOffset.UtcNow;
          long timestamp2 = (dto.Ticks - DateTimeOffset.UnixEpoch.Ticks) / TimeSpan.TicksPerMillisecond;
-         Console.WriteLine($"Способ 2 (Ручной расчет через Ticks):");
+         Console.WriteLine("Способ 2 (Ручной расчет через Ticks):");
          Console.WriteLine($"Результат: {timestamp2}");
          Console.WriteLine($"Длина: {timestamp2.ToString().Length} цифр");
          Console.WriteLine($"Формат: {timestamp2:#,##0}\n");
