@@ -27,11 +27,11 @@ namespace NewtonsoftJsonLibrary
          Console.WriteLine("==========================================");
 
          // Способ 1
-         long timestamp1 = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+         long timestampone = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
          Console.WriteLine("Способ 1 (DateTimeOffset.UtcNow.ToUnixTimeMilliseconds()):");
-         Console.WriteLine("Результат: {0}", timestamp1);
-         Console.WriteLine("Длина: {0} цифр", timestamp1.ToString().Length);
-         Console.WriteLine("Формат: {0:#,##0}\n", timestamp1);
+         Console.WriteLine("Результат: {0}", timestampone);
+         Console.WriteLine("Длина: {0} цифр", timestampone.ToString().Length);
+         Console.WriteLine("Формат: {0:#,##0}\n", timestampone);
 
          // Способ 2
          DateTimeOffset dto = DateTimeOffset.UtcNow;
@@ -59,13 +59,13 @@ namespace NewtonsoftJsonLibrary
 
          // Проверка эквивалентности
          Console.WriteLine("Проверка эквивалентности:");
-         Console.WriteLine("Способ 1 == Способ 2: {0}", timestamp1 == timestamp2);
+         Console.WriteLine("Способ 1 == Способ 2: {0}", timestampone == timestamp2);
          Console.WriteLine("Способ 2 == Способ 3: {0}", timestamp2 == timestamp3);
          Console.WriteLine("Способ 3 == Способ 4: {0}", timestamp3 == timestamp4);
 
          // Конвертация обратно для проверки
          Console.WriteLine("\nКонвертация обратно в DateTime:");
-         DateTimeOffset dateFromTimestamp = DateTimeOffset.FromUnixTimeMilliseconds(timestamp1);
+         DateTimeOffset dateFromTimestamp = DateTimeOffset.FromUnixTimeMilliseconds(timestampone);
          Console.WriteLine("Из timestamp1: {0:yyyy-MM-dd HH:mm:ss.fff}", dateFromTimestamp);
       }
 
