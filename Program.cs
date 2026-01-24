@@ -59,14 +59,14 @@ namespace NewtonsoftJsonLibrary
 
          // Проверка эквивалентности
          Console.WriteLine("Проверка эквивалентности:");
-         Console.WriteLine(string.Format("Способ 1 == Способ 2: {0}", timestamp1 == timestamp2));
-         Console.WriteLine(string.Format("Способ 2 == Способ 3: {0}", timestamp2 == timestamp3));
-         Console.WriteLine(string.Format("Способ 3 == Способ 4: {0}", timestamp3 == timestamp4));
+         Console.WriteLine("Способ 1 == Способ 2: {0}", timestamp1 == timestamp2);
+         Console.WriteLine("Способ 2 == Способ 3: {0}", timestamp2 == timestamp3);
+         Console.WriteLine("Способ 3 == Способ 4: {0}", timestamp3 == timestamp4);
 
          // Конвертация обратно для проверки
          Console.WriteLine("\nКонвертация обратно в DateTime:");
          DateTimeOffset dateFromTimestamp = DateTimeOffset.FromUnixTimeMilliseconds(timestamp1);
-         Console.WriteLine(string.Format("Из timestamp1: {0:yyyy-MM-dd HH:mm:ss.fff}", dateFromTimestamp));
+         Console.WriteLine("Из timestamp1: {0:yyyy-MM-dd HH:mm:ss.fff}", dateFromTimestamp);
       }
 
       // Точное время в Unix‑timestamp в миллисекундах (13‑значное число)
