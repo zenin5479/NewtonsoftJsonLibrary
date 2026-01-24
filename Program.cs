@@ -39,7 +39,7 @@ namespace NewtonsoftJsonLibrary
          Console.WriteLine("Способ 2 (Ручной расчет через Ticks):");
          Console.WriteLine("Результат: {0}", timestamp2);
          Console.WriteLine("Длина: {0} цифр", timestamp2.ToString().Length);
-         Console.WriteLine(string.Format("Формат: {0:#,##0}\n", timestamp2));
+         Console.WriteLine("Формат: {0:#,##0}\n", timestamp2);
 
          // Способ 3
          DateTimeOffset specificDate = DateTimeOffset.UtcNow;
