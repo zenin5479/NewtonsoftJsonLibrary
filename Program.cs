@@ -50,8 +50,8 @@ namespace NewtonsoftJsonLibrary
          Console.WriteLine("Формат: {0:#,##0}\n", timestampthree);
 
          // Способ 4
-         DateTime now = DateTime.UtcNow;
-         long timestamp4 = DateTimeExtensions.ToUnixTimestampMilliseconds(now);
+         DateTime timeExtensions = DateTime.UtcNow;
+         long timestamp4 = DateTimeExtensions.ToUnixTimestampMilliseconds(timeExtensions);
          Console.WriteLine("Способ 4 (Extension-метод):");
          Console.WriteLine("Результат: {0}", timestamp4);
          Console.WriteLine("Длина: {0} цифр", timestamp4.ToString().Length);
