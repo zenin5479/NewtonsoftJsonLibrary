@@ -35,19 +35,19 @@ namespace NewtonsoftJsonLibrary
 
          // Способ 2
          DateTimeOffset timeoffset = DateTimeOffset.UtcNow;
-         long timestamp2 = (timeoffset.Ticks - DateTimeOffset.UnixEpoch.Ticks) / TimeSpan.TicksPerMillisecond;
+         long timestamptwo = (timeoffset.Ticks - DateTimeOffset.UnixEpoch.Ticks) / TimeSpan.TicksPerMillisecond;
          Console.WriteLine("Способ 2 (Ручной расчет через Ticks):");
-         Console.WriteLine("Результат: {0}", timestamp2);
-         Console.WriteLine("Длина: {0} цифр", timestamp2.ToString().Length);
-         Console.WriteLine("Формат: {0:#,##0}\n", timestamp2);
+         Console.WriteLine("Результат: {0}", timestamptwo);
+         Console.WriteLine("Длина: {0} цифр", timestamptwo.ToString().Length);
+         Console.WriteLine("Формат: {0:#,##0}\n", timestamptwo);
 
          // Способ 3
-         DateTimeOffset specificDate = DateTimeOffset.UtcNow;
-         long timestamp3 = new DateTimeOffset(specificDate.UtcDateTime).ToUnixTimeMilliseconds();
+         DateTimeOffset specificdate = DateTimeOffset.UtcNow;
+         long timestampthree = new DateTimeOffset(specificdate.UtcDateTime).ToUnixTimeMilliseconds();
          Console.WriteLine("Способ 3 (new DateTimeOffset().ToUnixTimeMilliseconds()):");
-         Console.WriteLine("Результат: {0}", timestamp3);
-         Console.WriteLine("Длина: {0} цифр", timestamp3.ToString().Length);
-         Console.WriteLine("Формат: {0:#,##0}\n", timestamp3);
+         Console.WriteLine("Результат: {0}", timestampthree);
+         Console.WriteLine("Длина: {0} цифр", timestampthree.ToString().Length);
+         Console.WriteLine("Формат: {0:#,##0}\n", timestampthree);
 
          // Способ 4
          DateTime now = DateTime.UtcNow;
@@ -59,9 +59,9 @@ namespace NewtonsoftJsonLibrary
 
          // Проверка эквивалентности
          Console.WriteLine("Проверка эквивалентности:");
-         Console.WriteLine("Способ 1 == Способ 2: {0}", timestampone == timestamp2);
-         Console.WriteLine("Способ 2 == Способ 3: {0}", timestamp2 == timestamp3);
-         Console.WriteLine("Способ 3 == Способ 4: {0}", timestamp3 == timestamp4);
+         Console.WriteLine("Способ 1 == Способ 2: {0}", timestampone == timestamptwo);
+         Console.WriteLine("Способ 2 == Способ 3: {0}", timestamptwo == timestampthree);
+         Console.WriteLine("Способ 3 == Способ 4: {0}", timestampthree == timestamp4);
 
          // Конвертация обратно для проверки
          Console.WriteLine("\nКонвертация обратно в DateTime:");
