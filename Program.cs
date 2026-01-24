@@ -60,8 +60,8 @@ namespace NewtonsoftJsonLibrary
          // Проверка эквивалентности
          Console.WriteLine("Проверка эквивалентности:");
          Console.WriteLine(string.Format("Способ 1 == Способ 2: {0}", timestamp1 == timestamp2));
-         Console.WriteLine($"Способ 2 == Способ 3: {timestamp2 == timestamp3}");
-         Console.WriteLine($"Способ 3 == Способ 4: {timestamp3 == timestamp4}");
+         Console.WriteLine(string.Format("Способ 2 == Способ 3: {0}", timestamp2 == timestamp3));
+         Console.WriteLine(string.Format("Способ 3 == Способ 4: {0}", timestamp3 == timestamp4));
 
          // Конвертация обратно для проверки
          Console.WriteLine("\nКонвертация обратно в DateTime:");
