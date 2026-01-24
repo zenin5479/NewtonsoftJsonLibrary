@@ -65,8 +65,8 @@ namespace NewtonsoftJsonLibrary
 
          // Конвертация обратно для проверки
          Console.WriteLine("\nКонвертация обратно в DateTime:");
-         DateTimeOffset dateFromTimestamp = DateTimeOffset.FromUnixTimeMilliseconds(timestampone);
-         Console.WriteLine("Из timestamp1: {0:yyyy-MM-dd HH:mm:ss.fff}", dateFromTimestamp);
+         DateTimeOffset datefromtimestamp = DateTimeOffset.FromUnixTimeMilliseconds(timestampone);
+         Console.WriteLine("Из timestamp1: {0:yyyy-MM-dd HH:mm:ss.fff}", datefromtimestamp);
       }
 
       // Точное время в Unix‑timestamp в миллисекундах (13‑значное число)
