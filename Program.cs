@@ -30,7 +30,7 @@ namespace NewtonsoftJsonLibrary
          long timestamp1 = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
          Console.WriteLine("Способ 1 (DateTimeOffset.UtcNow.ToUnixTimeMilliseconds()):");
          Console.WriteLine("Результат: {0}", timestamp1);
-         Console.WriteLine($"Длина: {timestamp1.ToString().Length} цифр");
+         Console.WriteLine(string.Format("Длина: {0} цифр", timestamp1.ToString().Length));
          Console.WriteLine($"Формат: {timestamp1:#,##0}\n");
 
          // Способ 2
