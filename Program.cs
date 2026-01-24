@@ -50,18 +50,18 @@ namespace NewtonsoftJsonLibrary
          Console.WriteLine("Формат: {0:#,##0}\n", timestampthree);
 
          // Способ 4
-         DateTime timeExtensions = DateTime.UtcNow;
-         long timestamp4 = DateTimeExtensions.ToUnixTimestampMilliseconds(timeExtensions);
+         DateTime timeextensions = DateTime.UtcNow;
+         long timestampfour = DateTimeExtensions.ToUnixTimestampMilliseconds(timeextensions);
          Console.WriteLine("Способ 4 (Extension-метод):");
-         Console.WriteLine("Результат: {0}", timestamp4);
-         Console.WriteLine("Длина: {0} цифр", timestamp4.ToString().Length);
-         Console.WriteLine("Формат: {0:#,##0}\n", timestamp4);
+         Console.WriteLine("Результат: {0}", timestampfour);
+         Console.WriteLine("Длина: {0} цифр", timestampfour.ToString().Length);
+         Console.WriteLine("Формат: {0:#,##0}\n", timestampfour);
 
          // Проверка эквивалентности
          Console.WriteLine("Проверка эквивалентности:");
          Console.WriteLine("Способ 1 == Способ 2: {0}", timestampone == timestamptwo);
          Console.WriteLine("Способ 2 == Способ 3: {0}", timestamptwo == timestampthree);
-         Console.WriteLine("Способ 3 == Способ 4: {0}", timestampthree == timestamp4);
+         Console.WriteLine("Способ 3 == Способ 4: {0}", timestampthree == timestampfour);
 
          // Конвертация обратно для проверки
          Console.WriteLine("\nКонвертация обратно в DateTime:");
