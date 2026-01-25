@@ -135,8 +135,6 @@ namespace NewtonsoftJsonLibrary
          {
             Console.WriteLine("Представленное время является временем UTC");
          }
-
-         
       }
 
       // Базовая сериализация/десериализация объекта
