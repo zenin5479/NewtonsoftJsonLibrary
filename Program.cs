@@ -126,8 +126,16 @@ namespace NewtonsoftJsonLibrary
             Console.WriteLine("Представленное время является местным");
          }
 
-        
-         
+         if (deserializedEvent.Date.Kind == DateTimeKind.Unspecified)
+         {
+            Console.WriteLine("Представленное время не определено ни как местное, ни как время UTC");
+         }
+
+         if (deserializedEvent.Date.Kind == DateTimeKind.Utc)
+         {
+            Console.WriteLine("Представленное время является местным");
+         }
+
          Console.WriteLine("Kind: {0}", deserializedEvent.Date.Kind);
       }
 
