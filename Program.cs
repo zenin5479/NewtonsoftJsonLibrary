@@ -54,7 +54,6 @@ namespace NewtonsoftJsonLibrary
          Console.WriteLine("Проверка эквивалентности:");
          Console.WriteLine("Способ 1 == Способ 2: {0}", timestampone == timestamptwo);
          Console.WriteLine("Способ 2 == Способ 3: {0}", timestamptwo == timestampthree);
-         Console.WriteLine("Способ 3 == Способ 4: {0}", timestampthree == timestampfour);
 
          // Конвертация обратно для проверки
          Console.WriteLine("\nКонвертация обратно в DateTime:");
