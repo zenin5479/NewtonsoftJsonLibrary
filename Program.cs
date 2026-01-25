@@ -197,9 +197,7 @@ namespace NewtonsoftJsonLibrary
       }
    }
 
-   public static class DateTimeExtensions
-   {
-   }
+
 
    // Класс - Событие (время)
    public class Event
