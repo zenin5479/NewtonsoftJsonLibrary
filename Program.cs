@@ -197,8 +197,6 @@ namespace NewtonsoftJsonLibrary
       }
    }
 
-
-
    // Класс - Событие (время)
    public class Event
    {
