@@ -133,7 +133,7 @@ namespace NewtonsoftJsonLibrary
 
          if (deserializedEvent.Date.Kind == DateTimeKind.Utc)
          {
-            Console.WriteLine("Представленное время является местным");
+            Console.WriteLine("Представленное время является временем UTC");
          }
 
          Console.WriteLine("Kind: {0}", deserializedEvent.Date.Kind);
