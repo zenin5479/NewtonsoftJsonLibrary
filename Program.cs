@@ -121,6 +121,8 @@ namespace NewtonsoftJsonLibrary
          // Unspecified    0 	      Представленное время не определено ни как местное, ни как время UTC
          // Utc            1        Представленное время является временем UTC
 
+         deserializedEvent.Date.Kind
+
          Console.WriteLine("Kind: {0}", deserializedEvent.Date.Kind);
       }
 
