@@ -114,8 +114,6 @@ namespace NewtonsoftJsonLibrary
          // Десериализация
          Event deserializedEvent = JsonConvert.DeserializeObject<Event>(json);
          Console.WriteLine("\nДесериализованная дата: {0}", deserializedEvent.Date);
-        
-         
 
          if (deserializedEvent.Date.Kind == DateTimeKind.Local)
          {
