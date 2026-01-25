@@ -199,10 +199,6 @@ namespace NewtonsoftJsonLibrary
 
    public static class DateTimeExtensions
    {
-      public static long ToUnixTimestampMilliseconds(DateTime dateTime)
-      {
-         return new DateTimeOffset(dateTime).ToUnixTimeMilliseconds();
-      }
    }
 
    // Класс - Событие (время)
