@@ -97,7 +97,6 @@ namespace NewtonsoftJsonLibrary
          string javascriptJson = JsonConvert.SerializeObject(entry, new JavaScriptDateTimeConverter());
          Console.WriteLine(javascriptJson);
          // {"Details":"Application started.","LogDate":new Date(1234656000000)}
-
       }
 
       // Точное время в Unix‑timestamp в миллисекундах (13‑значное число)
@@ -284,7 +283,6 @@ namespace NewtonsoftJsonLibrary
       public decimal Price { get; set; }
       public string[] Sizes { get; set; }
    }
-
 
    public class EventLog
    {
