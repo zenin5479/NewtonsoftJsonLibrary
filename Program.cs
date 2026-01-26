@@ -87,7 +87,6 @@ namespace NewtonsoftJsonLibrary
             Name = "Структура DateTime",
             Date = DateTime.Now,
             DateUtc = DateTime.UtcNow,
-            DateToday = DateTime.Today,
             TimeStamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds()
          };
 
