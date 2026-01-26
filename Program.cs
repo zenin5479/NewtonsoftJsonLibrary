@@ -38,11 +38,8 @@ namespace NewtonsoftJsonLibrary
          };
          string customJson = JsonConvert.SerializeObject(log, customFormatSettings);
          Console.WriteLine(customJson);
-         // {"EventName":"Запуск приложения","Timestamp":"26.01.2026 15:30:45"}
 
-         // Десериализация
-
-         // 2. НАСТРОЙКИ для десериализации с указанием формата
+         // Десериализация с указанием формата
          JsonSerializerSettings settings = new JsonSerializerSettings
          {
             DateFormatString = "yyyy-MM-dd HH:mm:ss.fff"
