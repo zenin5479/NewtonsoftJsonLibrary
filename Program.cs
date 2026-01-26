@@ -32,18 +32,26 @@ namespace NewtonsoftJsonLibrary
          };
 
          // 2. Задание собственного формата строки
-         var customFormatSettings = new JsonSerializerSettings
+         JsonSerializerSettings customFormatSettings = new JsonSerializerSettings
          {
-            DateFormatString = "yyyy-MM-dd HH:mm:ss.fffffff"
+            DateFormatString = "yyyy-MM-dd HH:mm:ss.fff"
          };
          string customJson = JsonConvert.SerializeObject(log, customFormatSettings);
          Console.WriteLine(customJson);
          // {"EventName":"Запуск приложения","Timestamp":"26.01.2026 15:30:45"}
 
          // Десериализация
-         Event deserializedEvent = JsonConvert.DeserializeObject<Event>(json);
-         Console.WriteLine("\nДесериализованная дата: {0}", deserializedEvent.Date);
 
+         // 2. НАСТРОЙКИ для десериализации с указанием формата
+         JsonSerializerSettings settings = new JsonSerializerSettings
+         {
+            DateFormatString = "yyyy-MM-dd HH:mm:ss.fff"
+         };
+
+         EventLog deserializedEvent = JsonConvert.DeserializeObject<EventLog>(customJson, settings);
+         Console.WriteLine("\nДесериализованная дата: {0}", deserializedEvent.Timestamp);
+         Console.WriteLine("\nДесериализованная дата: {0}.{1}", deserializedEvent.Timestamp, deserializedEvent.Timestamp.Millisecond);
+         Console.WriteLine("Время (в формате строки): {0}", deserializedEvent.Timestamp.ToString("yyyy-MM-dd HH:mm:ss.fff"));
       }
 
       // Точное время в Unix‑timestamp в миллисекундах (13‑значное число)
