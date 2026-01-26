@@ -86,7 +86,7 @@ namespace NewtonsoftJsonLibrary
          {
             Name = "Структура DateTime",
             Date = DateTime.Now,
-            DateUtc = DateTime.UtcNow,
+            DateUtc = DateTimeOffset.UtcNow,
             TimeStamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds()
          };
 
@@ -195,7 +195,7 @@ namespace NewtonsoftJsonLibrary
    {
       public string Name { get; set; }
       public DateTime Date { get; set; }
-      public DateTime DateUtc { get; set; }
+      public DateTimeOffset DateUtc { get; set; }
       public long TimeStamp { get; set; }
    }
 
