@@ -24,7 +24,25 @@ namespace NewtonsoftJsonLibrary
       static void CaseFive()
       {
          // Изменение формата дат с помощью JsonSerializerSettings
+         // Пример сериализации
+         EventLog log = new EventLog
+         {
+            EventName = "Запуск приложения",
+            Timestamp = DateTime.Now
+         };
 
+         // 2. Задание собственного формата строки
+         var customFormatSettings = new JsonSerializerSettings
+         {
+            DateFormatString = "yyyy-MM-dd HH:mm:ss.fffffff"
+         };
+         string customJson = JsonConvert.SerializeObject(log, customFormatSettings);
+         Console.WriteLine(customJson);
+         // {"EventName":"Запуск приложения","Timestamp":"26.01.2026 15:30:45"}
+
+         // Десериализация
+         Event deserializedEvent = JsonConvert.DeserializeObject<Event>(json);
+         Console.WriteLine("\nДесериализованная дата: {0}", deserializedEvent.Date);
 
       }
 
@@ -197,6 +215,12 @@ namespace NewtonsoftJsonLibrary
             i++;
          }
       }
+   }
+
+   public class EventLog
+   {
+      public string EventName { get; set; }
+      public DateTime Timestamp { get; set; }
    }
 
    // Класс - Событие (время)
