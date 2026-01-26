@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 using System;
 using System.Collections.Generic;
 
@@ -48,6 +49,55 @@ namespace NewtonsoftJsonLibrary
          EventLog deserializedEvent = JsonConvert.DeserializeObject<EventLog>(customJson, settings);
          Console.WriteLine("\nДесериализованная дата: {0}", deserializedEvent.Timestamp);
          Console.WriteLine("Время (в формате строки): {0}", deserializedEvent.Timestamp.ToString("yyyy-MM-dd HH:mm:ss.fff"));
+
+         Product product = new Product();
+
+         product.Name = "Apple";
+         product.ExpiryDate = new DateTime(2008, 12, 28);
+         product.Price = 3.99M;
+         product.Sizes = new string[] { "Small", "Medium", "Large" };
+
+         string output = JsonConvert.SerializeObject(product, Formatting.Indented);
+         //{
+         //  "Name": "Apple",
+         //  "ExpiryDate": "2008-12-28T00:00:00",
+         //  "Price": 3.99,
+         //  "Sizes": [
+         //    "Small",
+         //    "Medium",
+         //    "Large"
+         //  ]
+         //}
+
+         Console.WriteLine(output);
+
+         Product deserializedProduct = JsonConvert.DeserializeObject<Product>(output);
+         Console.WriteLine(deserializedProduct.ExpiryDate);
+
+         LogEntry entry = new LogEntry
+         {
+            LogDate = new DateTime(2009, 2, 15, 0, 0, 0, DateTimeKind.Utc),
+            Details = "Application started."
+         };
+
+         // default as of Json.NET 4.5
+         string isoJson = JsonConvert.SerializeObject(entry);
+         Console.WriteLine(isoJson);
+         // {"Details":"Application started.","LogDate":"2009-02-15T00:00:00Z"}
+
+
+         JsonSerializerSettings microsoftDateFormatSettings = new JsonSerializerSettings
+         {
+            DateFormatHandling = DateFormatHandling.MicrosoftDateFormat
+         };
+         string microsoftJson = JsonConvert.SerializeObject(entry, microsoftDateFormatSettings);
+         Console.WriteLine(microsoftJson);
+         // {"Details":"Application started.","LogDate":"\/Date(1234656000000)\/"}
+
+         string javascriptJson = JsonConvert.SerializeObject(entry, new JavaScriptDateTimeConverter());
+         Console.WriteLine(javascriptJson);
+         // {"Details":"Application started.","LogDate":new Date(1234656000000)}
+
       }
 
       // Точное время в Unix‑timestamp в миллисекундах (13‑значное число)
@@ -220,6 +270,21 @@ namespace NewtonsoftJsonLibrary
          }
       }
    }
+
+   public class LogEntry
+   {
+      public string Details { get; set; }
+      public DateTime LogDate { get; set; }
+   }
+
+   internal class Product
+   {
+      public string Name { get; set; }
+      public DateTime ExpiryDate { get; set; }
+      public decimal Price { get; set; }
+      public string[] Sizes { get; set; }
+   }
+
 
    public class EventLog
    {
