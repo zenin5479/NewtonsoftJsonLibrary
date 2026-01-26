@@ -50,7 +50,6 @@ namespace NewtonsoftJsonLibrary
 
          EventLog deserializedEvent = JsonConvert.DeserializeObject<EventLog>(customJson, settings);
          Console.WriteLine("\nДесериализованная дата: {0}", deserializedEvent.Timestamp);
-         Console.WriteLine("\nДесериализованная дата: {0}.{1}", deserializedEvent.Timestamp, deserializedEvent.Timestamp.Millisecond);
          Console.WriteLine("Время (в формате строки): {0}", deserializedEvent.Timestamp.ToString("yyyy-MM-dd HH:mm:ss.fff"));
       }
 
