@@ -40,13 +40,9 @@ namespace NewtonsoftJsonLibrary
          string customJson = JsonConvert.SerializeObject(log, customFormatSettings);
          Console.WriteLine(customJson);
 
-         // Десериализация с указанием формата
-         JsonSerializerSettings settings = new JsonSerializerSettings
-         {
-            DateFormatString = "yyyy-MM-dd HH:mm:ss.fff"
-         };
+        
 
-         EventLog deserializedEvent = JsonConvert.DeserializeObject<EventLog>(customJson, settings);
+         EventLog deserializedEvent = JsonConvert.DeserializeObject<EventLog>(customJson, customFormatSettings);
          Console.WriteLine("\nДесериализованная дата: {0}", deserializedEvent.Timestamp);
          Console.WriteLine("Время (в формате строки): {0}", deserializedEvent.Timestamp.ToString("yyyy-MM-dd HH:mm:ss.fff"));
 
