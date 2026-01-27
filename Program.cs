@@ -52,7 +52,7 @@ namespace NewtonsoftJsonLibrary
          };
 
          string json = JsonConvert.SerializeObject(log, settings);
-         Event deserializedEven = JsonConvert.DeserializeObject<Event>(json, settings);
+         EventLog deserializedEven = JsonConvert.DeserializeObject<EventLog>(json, settings);
          Console.WriteLine(deserializedEven);
       }
 
