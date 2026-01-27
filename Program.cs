@@ -54,7 +54,6 @@ namespace NewtonsoftJsonLibrary
          Console.WriteLine(deserializedEven.Timestamp);
          Console.WriteLine("Десериализованная дата: {0}", deserializedEven.Timestamp);
          Console.WriteLine("Время (в формате строки): {0}", deserializedEven.Timestamp.ToString("yyyy-MM-dd HH:mm:ss.fff"));
-
       }
 
       // Точное время в Unix‑timestamp в миллисекундах (13‑значное число)
