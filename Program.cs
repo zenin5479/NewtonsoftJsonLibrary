@@ -30,27 +30,27 @@ namespace NewtonsoftJsonLibrary
             Timestamp = DateTime.Now
          };
 
-         // Задание собственного формата дат с помощью JsonSerializerSettings
-         JsonSerializerSettings customFormatSettings = new JsonSerializerSettings
+         // Настройка формата даты с помощью JsonSerializerSettings
+         JsonSerializerSettings customformatsettings = new JsonSerializerSettings
          {
             DateFormatString = "yyyy-MM-dd HH:mm:ss.fff"
          };
 
-         string customJson = JsonConvert.SerializeObject(log, customFormatSettings);
+         string customJson = JsonConvert.SerializeObject(log, customformatsettings);
          Console.WriteLine(customJson);
 
-         EventLog deserializedEvent = JsonConvert.DeserializeObject<EventLog>(customJson, customFormatSettings);
+         EventLog deserializedEvent = JsonConvert.DeserializeObject<EventLog>(customJson, customformatsettings);
          Console.WriteLine("Десериализованная дата: {0}", deserializedEvent.Timestamp);
          Console.WriteLine("Время (в формате строки): {0}", deserializedEvent.Timestamp.ToString("yyyy-MM-dd HH:mm:ss.fff"));
 
          // Настройка формата даты через IsoDateTimeConverter
-         JsonSerializerSettings settings = new JsonSerializerSettings
+         JsonSerializerSettings customsettings = new JsonSerializerSettings
          {
             Converters = { new IsoDateTimeConverter { DateTimeFormat = "yyyy-MM-dd HH:mm:ss.fff" } }
          };
 
-         string json = JsonConvert.SerializeObject(log, settings);
-         EventLog deserializedEven = JsonConvert.DeserializeObject<EventLog>(json, settings);
+         string json = JsonConvert.SerializeObject(log, customsettings);
+         EventLog deserializedEven = JsonConvert.DeserializeObject<EventLog>(json, customsettings);
          Console.WriteLine(deserializedEven.Timestamp);
          Console.WriteLine("Десериализованная дата: {0}", deserializedEven.Timestamp);
          Console.WriteLine("Время (в формате строки): {0}", deserializedEven.Timestamp.ToString("yyyy-MM-dd HH:mm:ss.fff"));
