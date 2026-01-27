@@ -57,28 +57,6 @@ namespace NewtonsoftJsonLibrary
 
          Product deserializedProduct = JsonConvert.DeserializeObject<Product>(output);
          Console.WriteLine(deserializedProduct.ExpiryDate);
-
-         LogEntry entry = new LogEntry
-         {
-            LogDate = new DateTime(2009, 2, 15, 0, 0, 0, DateTimeKind.Utc),
-            Details = "Время местное"
-         };
-
-         string isoJson = JsonConvert.SerializeObject(entry);
-         Console.WriteLine(isoJson);
-
-
-         JsonSerializerSettings microsoftDateFormatSettings = new JsonSerializerSettings
-         {
-            DateFormatHandling = DateFormatHandling.MicrosoftDateFormat
-         };
-         string microsoftJson = JsonConvert.SerializeObject(entry, microsoftDateFormatSettings);
-         Console.WriteLine(microsoftJson);
-         // {"Details":"Application started.","LogDate":"\/Date(1234656000000)\/"}
-
-         string javascriptJson = JsonConvert.SerializeObject(entry, new JavaScriptDateTimeConverter());
-         Console.WriteLine(javascriptJson);
-         // {"Details":"Application started.","LogDate":new Date(1234656000000)}
       }
 
       // Точное время в Unix‑timestamp в миллисекундах (13‑значное число)
