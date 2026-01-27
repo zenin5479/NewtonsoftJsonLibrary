@@ -102,7 +102,7 @@ namespace NewtonsoftJsonLibrary
          // Способ 2
          Console.WriteLine("========================================================");
          Console.WriteLine("Способ 2. Ручной расчет через Ticks");
-         Console.WriteLine("Текущее UTC время в миллисекундах: {0:yyyy-MM-dd HH:mm:ss.fff}", DateTime.Now);
+         Console.WriteLine("Текущее время в миллисекундах: {0:yyyy-MM-dd HH:mm:ss.fff}", DateTime.Now);
          DateTimeOffset datetimeoffset = DateTimeOffset.Now;
          long timestamptwo = (datetimeoffset.Ticks - DateTimeOffset.UnixEpoch.Ticks) / TimeSpan.TicksPerMillisecond;
          Console.WriteLine("Unix timestamp (ms): {0}", timestamptwo);
