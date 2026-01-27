@@ -31,15 +31,15 @@ namespace NewtonsoftJsonLibrary
          };
 
          // Настройка формата даты с помощью JsonSerializerSettings
-         JsonSerializerSettings customformatsettings = new JsonSerializerSettings
+         JsonSerializerSettings customformat = new JsonSerializerSettings
          {
             DateFormatString = "yyyy-MM-dd HH:mm:ss.fff"
          };
 
-         string customJson = JsonConvert.SerializeObject(log, customformatsettings);
+         string customJson = JsonConvert.SerializeObject(log, customformat);
          Console.WriteLine(customJson);
 
-         EventLog deserializedEvent = JsonConvert.DeserializeObject<EventLog>(customJson, customformatsettings);
+         EventLog deserializedEvent = JsonConvert.DeserializeObject<EventLog>(customJson, customformat);
          Console.WriteLine("Десериализованная дата: {0}", deserializedEvent.Timestamp);
          Console.WriteLine("Время (в формате строки): {0}", deserializedEvent.Timestamp.ToString("yyyy-MM-dd HH:mm:ss.fff"));
 
