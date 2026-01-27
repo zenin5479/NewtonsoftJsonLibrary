@@ -188,13 +188,6 @@ namespace NewtonsoftJsonLibrary
       }
    }
 
-   internal class Product
-   {
-      public string Name { get; set; }
-      public DateTime ExpiryDate { get; set; }
-      public decimal Price { get; set; }
-   }
-
    public class EventLog
    {
       public string EventName { get; set; }
