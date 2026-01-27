@@ -48,7 +48,7 @@ namespace NewtonsoftJsonLibrary
          
          JsonSerializerSettings settings = new JsonSerializerSettings
          {
-            Converters = { new IsoDateTimeConverter { DateTimeFormat = "yyyy-MM-dd" } }
+            Converters = { new IsoDateTimeConverter { DateTimeFormat = "yyyy-MM-dd HH:mm:ss.fff" } }
          };
 
          string json = JsonConvert.SerializeObject(log, settings);
