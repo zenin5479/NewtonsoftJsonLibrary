@@ -44,21 +44,6 @@ namespace NewtonsoftJsonLibrary
          EventLog deserializedEvent = JsonConvert.DeserializeObject<EventLog>(customJson, customFormatSettings);
          Console.WriteLine("Десериализованная дата: {0}", deserializedEvent.Timestamp);
          Console.WriteLine("Время (в формате строки): {0}", deserializedEvent.Timestamp.ToString("yyyy-MM-dd HH:mm:ss.fff"));
-
-         JsonSerializerSettings settings = new JsonSerializerSettings
-         {
-            DateFormatString = "yyyy-MM-dd HH:mm:ss"
-         };
-
-         string json = JsonConvert.SerializeObject(new { DateTime.Now }, settings);
-         Console.WriteLine(json);
-         // {"Now":"2023-10-05 14:30:25"}
-
-         DateTime obj = JsonConvert.DeserializeObject<DateTime>(json, settings);
-         DateTime now = obj.Date;
-         Console.WriteLine(now);
-
-
       }
 
       // Точное время в Unix‑timestamp в миллисекундах (13‑значное число)
