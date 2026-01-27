@@ -118,32 +118,6 @@ namespace NewtonsoftJsonLibrary
          long timestamptwo = (datetimeoffset.Ticks - DateTimeOffset.UnixEpoch.Ticks) / TimeSpan.TicksPerMillisecond;
          Console.WriteLine("Unix timestamp (ms): {0}", timestamptwo);
 
-         // Способ 3
-         Console.WriteLine("========================================================");
-         Console.WriteLine("Способ 3. new DateTimeOffset().ToUnixTimeMilliseconds()");
-         Console.WriteLine("Текущее UTC время в миллисекундах: {0:yyyy-MM-dd HH:mm:ss.fff}", DateTime.UtcNow);
-         DateTimeOffset specificdate = DateTimeOffset.UtcNow;
-         long timestampthree = new DateTimeOffset(specificdate.UtcDateTime).ToUnixTimeMilliseconds();
-         Console.WriteLine("Unix timestamp (ms): {0}", timestampthree);
-
-         // Способ 4
-         Console.WriteLine("========================================================");
-         Console.WriteLine("Способ 4. DateTime.UtcNow и вычитание эпохи");
-         Console.WriteLine("Текущее UTC время в миллисекундах: {0:yyyy-MM-dd HH:mm:ss.fff}", DateTime.UtcNow);
-         DateTime epoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
-         DateTime thistime = DateTime.UtcNow;
-         TimeSpan span = thistime - epoch;
-         long timestampfour = (long)span.TotalMilliseconds;
-         Console.WriteLine("Unix timestamp (ms): {0}", timestampfour);
-
-         // Способ 5
-         Console.WriteLine("========================================================");
-         Console.WriteLine("Способ 5. DateTimeOffset с явным преобразованием");
-         Console.WriteLine("Текущее UTC время в миллисекундах: {0:yyyy-MM-dd HH:mm:ss.fff}", DateTime.UtcNow);
-         DateTimeOffset rightnow = DateTimeOffset.UtcNow;
-         long timestampfive = rightnow.ToUnixTimeMilliseconds();
-         Console.WriteLine("Unix timestamp (ms): {0}", timestampfive);
-
          // Проверка эквивалентности
          Console.WriteLine("========================================================");
          Console.WriteLine("Проверка эквивалентности:");
