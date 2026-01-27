@@ -55,7 +55,7 @@ namespace NewtonsoftJsonLibrary
          product.Name = "Apple";
          product.ExpiryDate = new DateTime(2008, 12, 28);
          product.Price = 3.99M;
-         product.Sizes = new string[] { "Small", "Medium", "Large" };
+         product.Sizes = new[] { "Small", "Medium", "Large" };
 
          string output = JsonConvert.SerializeObject(product, Formatting.Indented);
          //{
@@ -123,8 +123,7 @@ namespace NewtonsoftJsonLibrary
          Console.WriteLine("Проверка эквивалентности:");
          Console.WriteLine("Способ 1 == Способ 2: {0}", timestampone == timestamptwo);
          Console.WriteLine("Способ 2 == Способ 3: {0}", timestamptwo == timestampthree);
-         Console.WriteLine("Способ 3 == Способ 4: {0}", timestampthree == timestampfour);
-         Console.WriteLine("Способ 4 == Способ 5: {0}", timestampfour == timestampfive);
+         
 
          // Конвертация обратно для проверки
          Console.WriteLine("========================================================");
