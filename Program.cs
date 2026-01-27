@@ -54,10 +54,9 @@ namespace NewtonsoftJsonLibrary
          {
             Name = "Apple",
             ExpiryDate = new DateTime(2008, 12, 28),
-            Price = 3.99M
+            Price = 3.99M,
+            Sizes = new[] { "Small", "Medium", "Large" }
          };
-
-         product.Sizes = new[] { "Small", "Medium", "Large" };
 
          string output = JsonConvert.SerializeObject(product, Formatting.Indented);
          //{
