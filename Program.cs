@@ -28,7 +28,7 @@ namespace NewtonsoftJsonLibrary
          // Пример сериализации
          EventLog log = new EventLog
          {
-            EventName = "Запуск приложения",
+            EventName = "Точное время",
             Timestamp = DateTime.Now
          };
 
@@ -37,13 +37,12 @@ namespace NewtonsoftJsonLibrary
          {
             DateFormatString = "yyyy-MM-dd HH:mm:ss.fff"
          };
+
          string customJson = JsonConvert.SerializeObject(log, customFormatSettings);
          Console.WriteLine(customJson);
 
-        
-
          EventLog deserializedEvent = JsonConvert.DeserializeObject<EventLog>(customJson, customFormatSettings);
-         Console.WriteLine("\nДесериализованная дата: {0}", deserializedEvent.Timestamp);
+         Console.WriteLine("Десериализованная дата: {0}", deserializedEvent.Timestamp);
          Console.WriteLine("Время (в формате строки): {0}", deserializedEvent.Timestamp.ToString("yyyy-MM-dd HH:mm:ss.fff"));
 
          Product product = new Product
@@ -62,13 +61,11 @@ namespace NewtonsoftJsonLibrary
          LogEntry entry = new LogEntry
          {
             LogDate = new DateTime(2009, 2, 15, 0, 0, 0, DateTimeKind.Utc),
-            Details = "Application started."
+            Details = "Время местное"
          };
 
-         // default as of Json.NET 4.5
          string isoJson = JsonConvert.SerializeObject(entry);
          Console.WriteLine(isoJson);
-         // {"Details":"Application started.","LogDate":"2009-02-15T00:00:00Z"}
 
 
          JsonSerializerSettings microsoftDateFormatSettings = new JsonSerializerSettings
