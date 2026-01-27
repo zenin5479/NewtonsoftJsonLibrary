@@ -50,12 +50,13 @@ namespace NewtonsoftJsonLibrary
          Console.WriteLine("\nДесериализованная дата: {0}", deserializedEvent.Timestamp);
          Console.WriteLine("Время (в формате строки): {0}", deserializedEvent.Timestamp.ToString("yyyy-MM-dd HH:mm:ss.fff"));
 
-         Product product = new Product();
-
-         product.Name = "Apple";
-         product.ExpiryDate = new DateTime(2008, 12, 28);
-         product.Price = 3.99M;
-         product.Sizes = new[] { "Small", "Medium", "Large" };
+         Product product = new Product
+         {
+            Name = "Apple",
+            ExpiryDate = new DateTime(2008, 12, 28),
+            Price = 3.99M,
+            Sizes = new[] { "Small", "Medium", "Large" }
+         };
 
          string output = JsonConvert.SerializeObject(product, Formatting.Indented);
          //{
