@@ -25,14 +25,13 @@ namespace NewtonsoftJsonLibrary
       static void CaseFive()
       {
          // Изменение формата дат с помощью JsonSerializerSettings
-         // Пример сериализации
          EventLog log = new EventLog
          {
             EventName = "Точное время",
             Timestamp = DateTime.Now
          };
 
-         // 2. Задание собственного формата строки
+         // Задание собственного формата строки
          JsonSerializerSettings customFormatSettings = new JsonSerializerSettings
          {
             DateFormatString = "yyyy-MM-dd HH:mm:ss.fff"
@@ -45,7 +44,6 @@ namespace NewtonsoftJsonLibrary
          Console.WriteLine("Десериализованная дата: {0}", deserializedEvent.Timestamp);
          Console.WriteLine("Время (в формате строки): {0}", deserializedEvent.Timestamp.ToString("yyyy-MM-dd HH:mm:ss.fff"));
 
-
          JsonSerializerSettings settings = new JsonSerializerSettings
          {
             Converters = { new IsoDateTimeConverter { DateTimeFormat = "yyyy-MM-dd HH:mm:ss.fff" } }
@@ -53,7 +51,10 @@ namespace NewtonsoftJsonLibrary
 
          string json = JsonConvert.SerializeObject(log, settings);
          EventLog deserializedEven = JsonConvert.DeserializeObject<EventLog>(json, settings);
-         Console.WriteLine(deserializedEven);
+         Console.WriteLine(deserializedEven.Timestamp);
+         Console.WriteLine("Десериализованная дата: {0}", deserializedEven.Timestamp);
+         Console.WriteLine("Время (в формате строки): {0}", deserializedEven.Timestamp.ToString("yyyy-MM-dd HH:mm:ss.fff"));
+
       }
 
       // Точное время в Unix‑timestamp в миллисекундах (13‑значное число)
