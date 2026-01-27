@@ -188,12 +188,6 @@ namespace NewtonsoftJsonLibrary
       }
    }
 
-   public class LogEntry
-   {
-      public string Details { get; set; }
-      public DateTime LogDate { get; set; }
-   }
-
    internal class Product
    {
       public string Name { get; set; }
