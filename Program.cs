@@ -52,8 +52,6 @@ namespace NewtonsoftJsonLibrary
          };
 
          string json = JsonConvert.SerializeObject(log, settings);
-         // {"Timestamp":"2023-10-05","Name":"Meeting"}
-
          Event deserializedEven = JsonConvert.DeserializeObject<Event>(json, settings);
          Console.WriteLine(deserializedEven);
       }
