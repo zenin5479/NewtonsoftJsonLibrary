@@ -52,10 +52,10 @@ namespace NewtonsoftJsonLibrary
 
          Product product = new Product
          {
-            Name = "Apple"
+            Name = "Apple",
+            ExpiryDate = new DateTime(2008, 12, 28)
          };
 
-         product.ExpiryDate = new DateTime(2008, 12, 28);
          product.Price = 3.99M;
          product.Sizes = new[] { "Small", "Medium", "Large" };
 
