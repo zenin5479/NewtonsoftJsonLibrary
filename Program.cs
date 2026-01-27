@@ -102,7 +102,7 @@ namespace NewtonsoftJsonLibrary
       // Точное время в Unix‑timestamp в миллисекундах (13‑значное число)
       static void CaseFour()
       {
-         Console.WriteLine("Определение точного времени в миллисекундах (13-значное число)");
+         Console.WriteLine("Определение точного времени UTC в миллисекундах (13-значное число)");
          // Способ 1
          Console.WriteLine("========================================================");
          Console.WriteLine("Способ 1. DateTimeOffset.UtcNow.ToUnixTimeMilliseconds()");
