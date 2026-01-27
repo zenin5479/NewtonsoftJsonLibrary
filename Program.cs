@@ -45,18 +45,20 @@ namespace NewtonsoftJsonLibrary
          Console.WriteLine("Десериализованная дата: {0}", deserializedEvent.Timestamp);
          Console.WriteLine("Время (в формате строки): {0}", deserializedEvent.Timestamp.ToString("yyyy-MM-dd HH:mm:ss.fff"));
 
-         Product product = new Product
+         JsonSerializerSettings settings = new JsonSerializerSettings
          {
-            Name = "Apple",
-            ExpiryDate = DateTime.Now,
-            Price = 3.99M
+            DateFormatString = "yyyy-MM-dd HH:mm:ss"
          };
 
-         string output = JsonConvert.SerializeObject(product, Formatting.Indented);
-         Console.WriteLine(output);
+         string json = JsonConvert.SerializeObject(new { DateTime.Now }, settings);
+         Console.WriteLine(json);
+         // {"Now":"2023-10-05 14:30:25"}
 
-         Product deserializedProduct = JsonConvert.DeserializeObject<Product>(output);
-         Console.WriteLine(deserializedProduct.ExpiryDate);
+         DateTime obj = JsonConvert.DeserializeObject<DateTime>(json, settings);
+         DateTime now = obj.Date;
+         Console.WriteLine(now);
+
+
       }
 
       // Точное время в Unix‑timestamp в миллисекундах (13‑значное число)
