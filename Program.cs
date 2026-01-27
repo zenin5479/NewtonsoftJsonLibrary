@@ -56,7 +56,6 @@ namespace NewtonsoftJsonLibrary
 
          Event deserializedEven = JsonConvert.DeserializeObject<Event>(json, settings);
          Console.WriteLine(deserializedEven);
-
       }
 
       // Точное время в Unix‑timestamp в миллисекундах (13‑значное число)
