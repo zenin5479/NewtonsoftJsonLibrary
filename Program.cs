@@ -53,17 +53,11 @@ namespace NewtonsoftJsonLibrary
          Product product = new Product
          {
             Name = "Apple",
-            ExpiryDate = new DateTime(2008, 12, 28),
+            ExpiryDate = DateTime.Now,
             Price = 3.99M
          };
 
          string output = JsonConvert.SerializeObject(product, Formatting.Indented);
-         //{
-         //  "Name": "Apple",
-         //  "ExpiryDate": "2008-12-28T00:00:00",
-         //  "Price": 3.99
-         //}
-
          Console.WriteLine(output);
 
          Product deserializedProduct = JsonConvert.DeserializeObject<Product>(output);
