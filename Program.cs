@@ -13,13 +13,13 @@ namespace NewtonsoftJsonLibrary
          Console.WriteLine();
          CaseTwo();
          Console.WriteLine();
-         CaseFive();
+         CaseThree();
 
          Console.ReadKey();
       }
 
       // Сериализация/десериализация точного времени в Unix‑timestamp в миллисекундах (13‑значное число)
-      static void CaseFive()
+      static void CaseThree()
       {
          Event log = new Event
          {
