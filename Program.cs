@@ -13,8 +13,6 @@ namespace NewtonsoftJsonLibrary
          Console.WriteLine();
          CaseTwo();
          Console.WriteLine();
-         CaseThree();
-         Console.WriteLine();
          CaseFive();
 
          Console.ReadKey();
