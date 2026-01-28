@@ -20,6 +20,7 @@ namespace NewtonsoftJsonLibrary
          Console.ReadKey();
       }
 
+      // Сериализация/десериализация точного времени в Unix‑timestamp в миллисекундах (13‑значное число)
       static void CaseFive()
       {
          EventLog log = new EventLog
@@ -54,7 +55,7 @@ namespace NewtonsoftJsonLibrary
          Console.WriteLine("Время (в формате строки): {0}", deserializedEven.Timestamp.ToString("yyyy-MM-dd HH:mm:ss.fff"));
       }
 
-      // Сериализация/десериализация точного времени в Unix‑timestamp в миллисекундах (13‑значное число)
+
       static void CaseThree()
       {
          Event eventItem = new Event
@@ -95,7 +96,7 @@ namespace NewtonsoftJsonLibrary
 
          // 2. Сериализация с форматированием (читаемый JSON)
          string jsonserializeformatting = JsonConvert.SerializeObject(user, Formatting.Indented);
-         Console.WriteLine("\n2. Сериализация объекта с форматированием:");
+         Console.WriteLine("\n2. Сериализация с форматированием (читаемый JSON):");
          Console.WriteLine(jsonserializeformatting);
 
          // Десериализация объекта
