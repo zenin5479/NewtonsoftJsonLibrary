@@ -32,7 +32,7 @@ namespace NewtonsoftJsonLibrary
             DateFormatString = "yyyy-MM-dd HH:mm:ss.fff"
          };
 
-         Console.WriteLine("1. Простая сериализация:");
+         Console.WriteLine("1. Cериализация. Настройка формата даты с помощью JsonSerializerSettings:");
          string customJson = JsonConvert.SerializeObject(log, customformat);
          Console.WriteLine(customJson);
 
