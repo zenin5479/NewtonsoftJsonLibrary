@@ -37,10 +37,10 @@ namespace NewtonsoftJsonLibrary
          string jsoncustom = JsonConvert.SerializeObject(log, customformat);
          Console.WriteLine(jsoncustom);
 
-         Event deserializedEvent = JsonConvert.DeserializeObject<Event>(jsoncustom, customformat);
-         Console.WriteLine("2. Десериализованная дата: {0}", deserializedEvent.Date);
-         Console.WriteLine("3. Время (в формате строки): {0}", deserializedEvent.Date.ToString("yyyy-MM-dd HH:mm:ss.fff"));
-         Console.WriteLine("4. Unix timestamp (ms): {0}", deserializedEvent.Timestamp);
+         Event deserializedevent = JsonConvert.DeserializeObject<Event>(jsoncustom, customformat);
+         Console.WriteLine("2. Десериализованная дата: {0}", deserializedevent.Date);
+         Console.WriteLine("3. Время (в формате строки): {0}", deserializedevent.Date.ToString("yyyy-MM-dd HH:mm:ss.fff"));
+         Console.WriteLine("4. Unix timestamp (ms): {0}", deserializedevent.Timestamp);
 
 
          // Настройка формата даты с помощью IsoDateTimeConverter
@@ -52,10 +52,10 @@ namespace NewtonsoftJsonLibrary
 
          string jsonsettings = JsonConvert.SerializeObject(log, customsettings);
          Console.WriteLine(jsonsettings);
-         Event deserializedEven = JsonConvert.DeserializeObject<Event>(jsonsettings, customsettings);
-         Console.WriteLine("2. Десериализованная дата: {0}", deserializedEvent.Date);
-         Console.WriteLine("3. Время (в формате строки): {0}", deserializedEvent.Date.ToString("yyyy-MM-dd HH:mm:ss.fff"));
-         Console.WriteLine("4. Unix timestamp (ms): {0}", deserializedEvent.Timestamp);
+         Event deserializedeven = JsonConvert.DeserializeObject<Event>(jsonsettings, customsettings);
+         Console.WriteLine("2. Десериализованная дата: {0}", deserializedeven.Date);
+         Console.WriteLine("3. Время (в формате строки): {0}", deserializedeven.Date.ToString("yyyy-MM-dd HH:mm:ss.fff"));
+         Console.WriteLine("4. Unix timestamp (ms): {0}", deserializedeven.Timestamp);
       }
 
       // Сериализация с форматированием (читаемый JSON)
