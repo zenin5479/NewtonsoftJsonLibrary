@@ -55,28 +55,6 @@ namespace NewtonsoftJsonLibrary
          Console.WriteLine("Время (в формате строки): {0}", deserializedEven.Timestamp.ToString("yyyy-MM-dd HH:mm:ss.fff"));
       }
 
-
-      static void CaseThree()
-      {
-         Event eventItem = new Event
-         {
-            Name = "Структура DateTime",
-            Date = DateTime.Now,
-            DateOffset = DateTimeOffset.Now,
-            TimeStamp = DateTimeOffset.Now.ToUnixTimeMilliseconds()
-         };
-
-         // Форматированный JSON
-         string json = JsonConvert.SerializeObject(eventItem, Formatting.Indented);
-         Console.WriteLine("Сериализация с форматированием (читаемый JSON):");
-         Console.WriteLine(json);
-
-         // Десериализация
-         Event deserializedEvent = JsonConvert.DeserializeObject<Event>(json);
-         Console.WriteLine("\nДесериализованная дата: {0}", deserializedEvent.Date);
-
-      }
-
       // Сериализация с форматированием (читаемый JSON)
       static void CaseTwo()
       {
@@ -99,7 +77,7 @@ namespace NewtonsoftJsonLibrary
          Console.WriteLine("\n2. Сериализация с форматированием (читаемый JSON):");
          Console.WriteLine(jsonserializeformatting);
 
-         // Десериализация объекта
+         // 3. Десериализация объекта
          Console.WriteLine("\n3. Десериализация объекта");
          User jsondeserialized = JsonConvert.DeserializeObject<User>(jsonserializeformatting);
          Console.WriteLine("Имя пользователя: {0}", jsondeserialized.UserName);
