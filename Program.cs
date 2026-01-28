@@ -74,20 +74,6 @@ namespace NewtonsoftJsonLibrary
          Event deserializedEvent = JsonConvert.DeserializeObject<Event>(json);
          Console.WriteLine("\nДесериализованная дата: {0}", deserializedEvent.Date);
 
-         if (deserializedEvent.Date.Kind == DateTimeKind.Local)
-         {
-            Console.WriteLine("Представленное время является местным");
-         }
-
-         if (deserializedEvent.Date.Kind == DateTimeKind.Unspecified)
-         {
-            Console.WriteLine("Представленное время не определено ни как местное, ни как время UTC");
-         }
-
-         if (deserializedEvent.Date.Kind == DateTimeKind.Utc)
-         {
-            Console.WriteLine("Представленное время является временем UTC");
-         }
       }
 
       // Базовая сериализация/десериализация объекта
