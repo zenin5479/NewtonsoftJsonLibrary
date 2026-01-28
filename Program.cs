@@ -21,7 +21,7 @@ namespace NewtonsoftJsonLibrary
       // Сериализация/десериализация точного времени в Unix‑timestamp в миллисекундах (13‑значное число)
       static void CaseFive()
       {
-         EventLog log = new EventLog
+         Event log = new Event
          {
             EventName = "Точное время",
             Timestamp = DateTime.Now
@@ -36,7 +36,7 @@ namespace NewtonsoftJsonLibrary
          string customJson = JsonConvert.SerializeObject(log, customformat);
          Console.WriteLine(customJson);
 
-         EventLog deserializedEvent = JsonConvert.DeserializeObject<EventLog>(customJson, customformat);
+         Event deserializedEvent = JsonConvert.DeserializeObject<Event>(customJson, customformat);
          Console.WriteLine("Десериализованная дата: {0}", deserializedEvent.Timestamp);
          Console.WriteLine("Время (в формате строки): {0}", deserializedEvent.Timestamp.ToString("yyyy-MM-dd HH:mm:ss.fff"));
 
@@ -47,7 +47,7 @@ namespace NewtonsoftJsonLibrary
          };
 
          string json = JsonConvert.SerializeObject(log, customsettings);
-         EventLog deserializedEven = JsonConvert.DeserializeObject<EventLog>(json, customsettings);
+         Event deserializedEven = JsonConvert.DeserializeObject<Event>(json, customsettings);
          Console.WriteLine(deserializedEven.Timestamp);
          Console.WriteLine("Десериализованная дата: {0}", deserializedEven.Timestamp);
          Console.WriteLine("Время (в формате строки): {0}", deserializedEven.Timestamp.ToString("yyyy-MM-dd HH:mm:ss.fff"));
@@ -113,7 +113,7 @@ namespace NewtonsoftJsonLibrary
       }
    }
 
-   public class EventLog
+   public class Event
    {
       public string EventName { get; set; }
       public DateTime Timestamp { get; set; }
