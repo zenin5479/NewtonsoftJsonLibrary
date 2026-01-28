@@ -23,7 +23,6 @@ namespace NewtonsoftJsonLibrary
       {
          Event log = new Event
          {
-            EventName = "Точное время",
             Timestamp = DateTime.Now
          };
 
@@ -33,11 +32,12 @@ namespace NewtonsoftJsonLibrary
             DateFormatString = "yyyy-MM-dd HH:mm:ss.fff"
          };
 
+         Console.WriteLine("1. Простая сериализация:");
          string customJson = JsonConvert.SerializeObject(log, customformat);
          Console.WriteLine(customJson);
 
          Event deserializedEvent = JsonConvert.DeserializeObject<Event>(customJson, customformat);
-         Console.WriteLine("Десериализованная дата: {0}", deserializedEvent.Timestamp);
+         Console.WriteLine("2. Десериализованная дата: {0}", deserializedEvent.Timestamp);
          Console.WriteLine("Время (в формате строки): {0}", deserializedEvent.Timestamp.ToString("yyyy-MM-dd HH:mm:ss.fff"));
 
          // Настройка формата даты через IsoDateTimeConverter
@@ -115,7 +115,6 @@ namespace NewtonsoftJsonLibrary
 
    public class Event
    {
-      public string EventName { get; set; }
       public DateTime Timestamp { get; set; }
    }
 
