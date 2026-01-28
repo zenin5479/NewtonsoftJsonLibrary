@@ -21,9 +21,18 @@ namespace NewtonsoftJsonLibrary
       // Сериализация/десериализация точного времени в Unix‑timestamp в миллисекундах (13‑значное число)
       static void CaseThree()
       {
+         Console.WriteLine("Определение точного времени в миллисекундах (13-значное число)");
+         // Способ 1
+         Console.WriteLine("========================================================");
+         Console.WriteLine("Способ 1. DateTimeOffset.Now.ToUnixTimeMilliseconds()");
+         Console.WriteLine("Текущее время в миллисекундах: {0:yyyy-MM-dd HH:mm:ss.fff}", DateTime.Now);
+         long timestampone = DateTimeOffset.Now.ToUnixTimeMilliseconds();
+         Console.WriteLine("Unix timestamp (ms): {0}", timestampone);
+
          Event log = new Event
          {
-            Timestamp = DateTime.Now
+            Date = DateTime.Now,
+            Timestamp = DateTimeOffset.Now.ToUnixTimeMilliseconds()
          };
 
          // Настройка формата даты с помощью JsonSerializerSettings
@@ -50,7 +59,6 @@ namespace NewtonsoftJsonLibrary
          string jsonsettings = JsonConvert.SerializeObject(log, customsettings);
          Console.WriteLine(jsonsettings);
          Event deserializedEven = JsonConvert.DeserializeObject<Event>(jsonsettings, customsettings);
-         Console.WriteLine(deserializedEven.Timestamp);
          Console.WriteLine("2. Десериализованная дата: {0}", deserializedEven.Timestamp);
          Console.WriteLine("3. Время (в формате строки): {0}", deserializedEven.Timestamp.ToString("yyyy-MM-dd HH:mm:ss.fff"));
       }
@@ -117,7 +125,8 @@ namespace NewtonsoftJsonLibrary
 
    public class Event
    {
-      public DateTime Timestamp { get; set; }
+      public DateTime Date { get; set; }
+      public long Timestamp { get; set; }
    }
 
    // Класс - Пользователь
