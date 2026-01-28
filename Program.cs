@@ -48,6 +48,7 @@ namespace NewtonsoftJsonLibrary
          };
 
          string json = JsonConvert.SerializeObject(log, customsettings);
+         Console.WriteLine(json);
          Event deserializedEven = JsonConvert.DeserializeObject<Event>(json, customsettings);
          Console.WriteLine(deserializedEven.Timestamp);
          Console.WriteLine("2. Десериализованная дата: {0}", deserializedEven.Timestamp);
