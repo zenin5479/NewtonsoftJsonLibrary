@@ -47,9 +47,9 @@ namespace NewtonsoftJsonLibrary
             Converters = { new IsoDateTimeConverter { DateTimeFormat = "yyyy-MM-dd HH:mm:ss.fff" } }
          };
 
-         string json = JsonConvert.SerializeObject(log, customsettings);
-         Console.WriteLine(json);
-         Event deserializedEven = JsonConvert.DeserializeObject<Event>(json, customsettings);
+         string jsonsettings = JsonConvert.SerializeObject(log, customsettings);
+         Console.WriteLine(jsonsettings);
+         Event deserializedEven = JsonConvert.DeserializeObject<Event>(jsonsettings, customsettings);
          Console.WriteLine(deserializedEven.Timestamp);
          Console.WriteLine("2. Десериализованная дата: {0}", deserializedEven.Timestamp);
          Console.WriteLine("3. Время (в формате строки): {0}", deserializedEven.Timestamp.ToString("yyyy-MM-dd HH:mm:ss.fff"));
