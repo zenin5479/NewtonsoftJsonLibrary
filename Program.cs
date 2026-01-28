@@ -39,7 +39,7 @@ namespace NewtonsoftJsonLibrary
 
          Event deserializedEvent = JsonConvert.DeserializeObject<Event>(jsoncustom, customformat);
          Console.WriteLine("2. Десериализованная дата: {0}", deserializedEvent.Date);
-         Console.WriteLine("3. Время (в формате строки): {0}", deserializedEvent.Timestamp.ToString("yyyy-MM-dd HH:mm:ss.fff"));
+         Console.WriteLine("3. Время (в формате строки): {0}", deserializedEvent.Date.ToString("yyyy-MM-dd HH:mm:ss.fff"));
          Console.WriteLine("4. Unix timestamp (ms): {0}", deserializedEvent.Timestamp);
 
 
@@ -53,8 +53,9 @@ namespace NewtonsoftJsonLibrary
          string jsonsettings = JsonConvert.SerializeObject(log, customsettings);
          Console.WriteLine(jsonsettings);
          Event deserializedEven = JsonConvert.DeserializeObject<Event>(jsonsettings, customsettings);
-         Console.WriteLine("2. Десериализованная дата: {0}", deserializedEven.Timestamp);
-         Console.WriteLine("3. Время (в формате строки): {0}", deserializedEven.Timestamp.ToString("yyyy-MM-dd HH:mm:ss.fff"));
+         Console.WriteLine("2. Десериализованная дата: {0}", deserializedEvent.Date);
+         Console.WriteLine("3. Время (в формате строки): {0}", deserializedEvent.Date.ToString("yyyy-MM-dd HH:mm:ss.fff"));
+         Console.WriteLine("4. Unix timestamp (ms): {0}", deserializedEvent.Timestamp);
       }
 
       // Сериализация с форматированием (читаемый JSON)
