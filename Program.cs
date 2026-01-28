@@ -21,10 +21,7 @@ namespace NewtonsoftJsonLibrary
       // Сериализация/десериализация точного времени в Unix‑timestamp в миллисекундах (13‑значное число)
       static void CaseThree()
       {
-         Console.WriteLine("Определение точного времени в миллисекундах (13-значное число)");
-         // Способ 1
-         Console.WriteLine("========================================================");
-         Console.WriteLine("Способ 1. DateTimeOffset.Now.ToUnixTimeMilliseconds()");
+
          Console.WriteLine("Текущее время в миллисекундах: {0:yyyy-MM-dd HH:mm:ss.fff}", DateTime.Now);
          long timestampone = DateTimeOffset.Now.ToUnixTimeMilliseconds();
          Console.WriteLine("Unix timestamp (ms): {0}", timestampone);
@@ -46,8 +43,10 @@ namespace NewtonsoftJsonLibrary
          Console.WriteLine(jsoncustom);
 
          Event deserializedEvent = JsonConvert.DeserializeObject<Event>(jsoncustom, customformat);
-         Console.WriteLine("2. Десериализованная дата: {0}", deserializedEvent.Timestamp);
+         Console.WriteLine("2. Десериализованная дата: {0}", deserializedEvent.Date);
          Console.WriteLine("3. Время (в формате строки): {0}", deserializedEvent.Timestamp.ToString("yyyy-MM-dd HH:mm:ss.fff"));
+         Console.WriteLine("4. Unix timestamp (ms): {0}", deserializedEvent.Timestamp);
+
 
          // Настройка формата даты с помощью IsoDateTimeConverter
          Console.WriteLine("1. Cериализация. Настройка формата даты с помощью IsoDateTimeConverter:");
