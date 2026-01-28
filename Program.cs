@@ -119,15 +119,6 @@ namespace NewtonsoftJsonLibrary
       public DateTime Timestamp { get; set; }
    }
 
-   // Класс - Событие (время)
-   public class Event
-   {
-      public string Name { get; set; }
-      public DateTime Date { get; set; }
-      public DateTimeOffset DateOffset { get; set; }
-      public long TimeStamp { get; set; }
-   }
-
    // Класс - Пользователь
    public class User
    {
