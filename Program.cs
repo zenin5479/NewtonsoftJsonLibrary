@@ -38,7 +38,7 @@ namespace NewtonsoftJsonLibrary
 
          Event deserializedEvent = JsonConvert.DeserializeObject<Event>(customJson, customformat);
          Console.WriteLine("2. Десериализованная дата: {0}", deserializedEvent.Timestamp);
-         Console.WriteLine("Время (в формате строки): {0}", deserializedEvent.Timestamp.ToString("yyyy-MM-dd HH:mm:ss.fff"));
+         Console.WriteLine("3. Время (в формате строки): {0}", deserializedEvent.Timestamp.ToString("yyyy-MM-dd HH:mm:ss.fff"));
 
          // Настройка формата даты с помощью IsoDateTimeConverter
          Console.WriteLine("1. Cериализация. Настройка формата даты с помощью IsoDateTimeConverter:");
@@ -50,8 +50,8 @@ namespace NewtonsoftJsonLibrary
          string json = JsonConvert.SerializeObject(log, customsettings);
          Event deserializedEven = JsonConvert.DeserializeObject<Event>(json, customsettings);
          Console.WriteLine(deserializedEven.Timestamp);
-         Console.WriteLine("Десериализованная дата: {0}", deserializedEven.Timestamp);
-         Console.WriteLine("Время (в формате строки): {0}", deserializedEven.Timestamp.ToString("yyyy-MM-dd HH:mm:ss.fff"));
+         Console.WriteLine("2. Десериализованная дата: {0}", deserializedEven.Timestamp);
+         Console.WriteLine("3. Время (в формате строки): {0}", deserializedEven.Timestamp.ToString("yyyy-MM-dd HH:mm:ss.fff"));
       }
 
       // Сериализация с форматированием (читаемый JSON)
