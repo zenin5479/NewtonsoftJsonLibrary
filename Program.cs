@@ -76,7 +76,8 @@ namespace NewtonsoftJsonLibrary
 
       }
 
-      // Базовая сериализация/десериализация объекта
+      // Сериализация с форматированием (читаемый JSON)
+
       static void CaseTwo()
       {
          // Создание объекта
@@ -107,26 +108,11 @@ namespace NewtonsoftJsonLibrary
          Console.WriteLine("Роли: {0}", string.Join(", ", jsondeserialized.Roles));
       }
 
-      // Сериализация с форматированием (читаемый JSON)
+      // Базовая сериализация/десериализация объекта
       static void CaseOne()
       {
-         Console.WriteLine("1. Сериализация объекта");
-         // 1. Сериализация
-         Movie movie = new Movie { Id = 1, Title = "Миссия невыполнима" };
-         // movie - объект, преобразуем его в строку с помощью JsonConvert.SerializeObject           
-         string result = JsonConvert.SerializeObject(movie);
-         // Преобразуется в строку в виде {"Id": 1,"Title": "Миссия невыполнима"}
-         Console.WriteLine(result);
-
-         Console.WriteLine("\n2. Десериализация объекта");
-         // 2. Десериализация
-         Movie newMovie = JsonConvert.DeserializeObject<Movie>(result);
-         // Теперь строка преобразуется в объект           
-         Console.WriteLine("Id: " + newMovie.Id);
-         Console.WriteLine("Title: " + newMovie.Title);
-
-         Console.WriteLine("\n3. Сериализация коллекции");
-         // 3. Сериализация коллекции
+         Console.WriteLine("1. Сериализация коллекции");
+         // 1. Сериализация коллекции
          List<Movie> movies = new List<Movie>
          {
             new Movie{ Id=1, Title="Титаник" },
@@ -138,8 +124,8 @@ namespace NewtonsoftJsonLibrary
          string collectionResult = JsonConvert.SerializeObject(movies);
          Console.WriteLine(collectionResult);
 
-         Console.WriteLine("\n4. Десериализация коллекции");
-         // 4. Десериализация коллекции
+         Console.WriteLine("\n2. Десериализация коллекции");
+         // 2. Десериализация коллекции
          List<Movie> newMovies = JsonConvert.DeserializeObject<List<Movie>>(collectionResult);
          int i = 0;
          while (i < newMovies.Count)
