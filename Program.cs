@@ -125,7 +125,7 @@ namespace NewtonsoftJsonLibrary
    }
 
    // Класс - Пользователь
-   public class User
+   class User
    {
       public string UserName { get; set; }
       public string Email { get; set; }
