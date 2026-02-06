@@ -18,9 +18,6 @@ namespace NewtonsoftJsonLibrary
          Console.ReadKey();
       }
 
-
-
-
       // Базовая сериализация/десериализация коллекции
       static void CaseOne()
       {
@@ -78,7 +75,6 @@ namespace NewtonsoftJsonLibrary
          Console.WriteLine("Активен: {0}", jsondeserialized.IsActive);
          Console.WriteLine("Роли: {0}", string.Join(", ", jsondeserialized.Roles));
       }
-
 
       // Сериализация/десериализация точного времени в Unix‑timestamp в миллисекундах (13‑значное число)
       static void CaseThree()
