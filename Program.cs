@@ -42,7 +42,6 @@ namespace NewtonsoftJsonLibrary
          Console.WriteLine("3. Время (в формате строки): {0}", deserializedevent.Date.ToString("dd.MM.yyyy HH:mm:ss.fff"));
          Console.WriteLine("4. Unix timestamp (ms): {0}", deserializedevent.Timestamp);
 
-
          // Настройка формата даты с помощью IsoDateTimeConverter
          Console.WriteLine("1. Cериализация. Настройка формата даты с помощью IsoDateTimeConverter:");
          JsonSerializerSettings customsettings = new JsonSerializerSettings
