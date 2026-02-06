@@ -57,6 +57,35 @@ namespace NewtonsoftJsonLibrary
          Console.WriteLine("4. Unix timestamp (ms): {0}", deserializedeven.Timestamp);
       }
 
+
+
+      // Базовая сериализация/десериализация коллекции
+      static void CaseOne()
+      {
+         Console.WriteLine("1. Сериализация коллекции");
+         // 1. Сериализация коллекции
+         List<Movie> movies = new List<Movie>
+         {
+            new Movie{ Id=1, Title="Титаник" },
+            new Movie{ Id=2, Title="Марсианин"},
+            new Movie{ Id=3, Title="Черная пантера"},
+            new Movie{ Id=4, Title="Дэдпул 2"}
+         };
+
+         string collectionResult = JsonConvert.SerializeObject(movies);
+         Console.WriteLine(collectionResult);
+         Console.WriteLine("\n2. Десериализация коллекции");
+         // 2. Десериализация коллекции
+         List<Movie> newMovies = JsonConvert.DeserializeObject<List<Movie>>(collectionResult);
+         int i = 0;
+         while (i < newMovies.Count)
+         {
+            Movie item = newMovies[i];
+            Console.WriteLine("Id: " + item.Id + "; " + "Title: " + item.Title);
+            i++;
+         }
+      }
+
       // Сериализация с форматированием (читаемый JSON)
       static void CaseTwo()
       {
@@ -86,33 +115,6 @@ namespace NewtonsoftJsonLibrary
          Console.WriteLine("Email: {0}", jsondeserialized.Email);
          Console.WriteLine("Активен: {0}", jsondeserialized.IsActive);
          Console.WriteLine("Роли: {0}", string.Join(", ", jsondeserialized.Roles));
-      }
-
-      // Базовая сериализация/десериализация коллекции
-      static void CaseOne()
-      {
-         Console.WriteLine("1. Сериализация коллекции");
-         // 1. Сериализация коллекции
-         List<Movie> movies = new List<Movie>
-         {
-            new Movie{ Id=1, Title="Титаник" },
-            new Movie{ Id=2, Title="Марсианин"},
-            new Movie{ Id=3, Title="Черная пантера"},
-            new Movie{ Id=4, Title="Дэдпул 2"}
-         };
-
-         string collectionResult = JsonConvert.SerializeObject(movies);
-         Console.WriteLine(collectionResult);
-         Console.WriteLine("\n2. Десериализация коллекции");
-         // 2. Десериализация коллекции
-         List<Movie> newMovies = JsonConvert.DeserializeObject<List<Movie>>(collectionResult);
-         int i = 0;
-         while (i < newMovies.Count)
-         {
-            Movie item = newMovies[i];
-            Console.WriteLine("Id: " + item.Id + "; " + "Title: " + item.Title);
-            i++;
-         }
       }
    }
 
