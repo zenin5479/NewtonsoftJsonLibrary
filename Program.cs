@@ -21,8 +21,6 @@ namespace NewtonsoftJsonLibrary
       // Сериализация/десериализация точного времени в Unix‑timestamp в миллисекундах (13‑значное число)
       static void CaseThree()
       {
-         // 1. Получение Timestamp
-         Console.WriteLine("========================================================");
          Console.WriteLine("Получение Timestamp через DateTimeOffset (рекомендуется)");
          DateTimeOffset dateTimeOne = DateTimeOffset.UtcNow;
          long timestampOne = dateTimeOne.ToUnixTimeMilliseconds();
