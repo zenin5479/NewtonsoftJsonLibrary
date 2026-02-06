@@ -37,7 +37,7 @@ namespace NewtonsoftJsonLibrary
          Console.WriteLine("1. Cериализация. Настройка формата даты с помощью JsonSerializerSettings:");
          JsonSerializerSettings customformat = new JsonSerializerSettings
          {
-            DateFormatString = "0:dd.MM.yyyy HH:mm:ss.fff"
+            DateFormatString = "dd.MM.yyyy HH:mm:ss.fff"
          };
 
          string jsoncustom = JsonConvert.SerializeObject(log, customformat);
@@ -45,7 +45,7 @@ namespace NewtonsoftJsonLibrary
 
          Event deserializedevent = JsonConvert.DeserializeObject<Event>(jsoncustom, customformat);
          Console.WriteLine("2. Десериализованная дата: {0}", deserializedevent.Date);
-         Console.WriteLine("3. Время (в формате строки): {0}", deserializedevent.Date.ToString("yyyy-MM-dd HH:mm:ss.fff"));
+         Console.WriteLine("3. Время (в формате строки): {0}", deserializedevent.Date.ToString("dd.MM.yyyy HH:mm:ss.fff"));
          Console.WriteLine("4. Unix timestamp (ms): {0}", deserializedevent.Timestamp);
 
 
@@ -53,7 +53,7 @@ namespace NewtonsoftJsonLibrary
          Console.WriteLine("1. Cериализация. Настройка формата даты с помощью IsoDateTimeConverter:");
          JsonSerializerSettings customsettings = new JsonSerializerSettings
          {
-            Converters = { new IsoDateTimeConverter { DateTimeFormat = "yyyy-MM-dd HH:mm:ss.fff" } }
+            Converters = { new IsoDateTimeConverter { DateTimeFormat = "dd.MM.yyyy HH:mm:ss.fff" } }
          };
 
          string jsonsettings = JsonConvert.SerializeObject(log, customsettings);
