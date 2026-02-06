@@ -126,7 +126,7 @@ namespace NewtonsoftJsonLibrary
 
    public class Event
    {
-      public DateTime Date { get; set; }
+      public DateTimeOffset Date { get; set; }
       public long Timestamp { get; set; }
    }
 
