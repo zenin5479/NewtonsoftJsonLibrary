@@ -104,7 +104,6 @@ namespace NewtonsoftJsonLibrary
 
          string collectionResult = JsonConvert.SerializeObject(movies);
          Console.WriteLine(collectionResult);
-
          Console.WriteLine("\n2. Десериализация коллекции");
          // 2. Десериализация коллекции
          List<Movie> newMovies = JsonConvert.DeserializeObject<List<Movie>>(collectionResult);
