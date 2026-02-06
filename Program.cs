@@ -21,7 +21,6 @@ namespace NewtonsoftJsonLibrary
       // Сериализация/десериализация точного времени в Unix‑timestamp в миллисекундах (13‑значное число)
       static void CaseThree()
       {
-         Console.WriteLine("Получение Timestamp через DateTimeOffset (рекомендуется)");
          DateTimeOffset dateTimeOne = DateTimeOffset.UtcNow;
          long timestampOne = dateTimeOne.ToUnixTimeMilliseconds();
          Console.WriteLine("Текущее UTC время: {0}", dateTimeOne);
