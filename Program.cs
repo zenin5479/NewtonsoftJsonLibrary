@@ -118,7 +118,7 @@ namespace NewtonsoftJsonLibrary
       }
    }
 
-   // Класс - Пользователь
+   // Класс - Событие
    class Event
    {
       public DateTimeOffset Date { get; set; }
