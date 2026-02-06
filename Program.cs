@@ -29,7 +29,7 @@ namespace NewtonsoftJsonLibrary
 
          Event log = new Event
          {
-            Date = DateTime.Now,
+            Date = DateTimeOffset.UtcNow,
             Timestamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds()
          };
 
