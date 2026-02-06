@@ -33,7 +33,7 @@ namespace NewtonsoftJsonLibrary
          Event log = new Event
          {
             Date = DateTime.Now,
-            Timestamp = DateTimeOffset.Now.ToUnixTimeMilliseconds()
+            Timestamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds()
          };
 
          // Настройка формата даты с помощью JsonSerializerSettings
